@@ -1,0 +1,64 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{amsmath}%
+%
+%
+%
+\begin{document}%
+\normalsize%
+\begin{equation*}\mathtt{\text{Parsed data from 'foodWebData'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-CRC 'crc\_test2x2'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-Matrix size (n) '2'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-Nodes / compartiments (l) '1'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-Initial biomass (bo):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}5\\6\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Biomass (b):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}5\\6\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Imports (p):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}7\\8\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Exports (q):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}9\\10\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Respiration (r):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}11\\12\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Flow matrix (F):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}1 & 2\\3 & 4\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Writting file 'steadyStatesDonorControl.m'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{Calculating general model derivative for foodWebData 'foodWebData'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{Donor control initial consumption intensity}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{cc}\frac{F_{0, 0}}{b^{*}_{0}} & \frac{F_{0, 1}}{b^{*}_{1}}\\\frac{F_{1, 0}}{b^{*}_{0}} & \frac{F_{1, 1}}{b^{*}_{1}}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}\frac{1}{5} & \frac{1}{3}\\\frac{3}{5} & \frac{2}{3}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Donor control total system flows}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{c}\frac{b_{1} F_{0, 1}}{b^{*}_{1}} - \frac{b_{0} F_{1, 0}}{b^{*}_{0}}\\\frac{b_{0} F_{1, 0}}{b^{*}_{0}} - \frac{b_{1} F_{0, 1}}{b^{*}_{1}}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}- \frac{3 b_{0}}{5} + \frac{b_{1}}{3}\\- \frac{b_{1}}{3} + \frac{3 b_{0}}{5}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Recipient initial consumption intensity}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{cc}\frac{F_{0, 0}}{b^{*}_{0}} & \frac{F_{0, 1}}{b^{*}_{0}}\\\frac{F_{1, 0}}{b^{*}_{1}} & \frac{F_{1, 1}}{b^{*}_{1}}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}\frac{1}{5} & \frac{2}{5}\\\frac{1}{2} & \frac{2}{3}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Recipient total system flows}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{c}\frac{b_{0} F_{0, 1}}{b^{*}_{0}} - \frac{b_{1} F_{1, 0}}{b^{*}_{1}}\\\frac{b_{1} F_{1, 0}}{b^{*}_{1}} - \frac{b_{0} F_{0, 1}}{b^{*}_{0}}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}- \frac{b_{1}}{2} + \frac{2 b_{0}}{5}\\\frac{b_{1}}{2} - \frac{2 b_{0}}{5}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Mixed initial consumption intensity}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{cc}\frac{F_{0, 0}}{\left(b^{*}_{0}\right)^{2}} & \frac{F_{0, 1}}{b^{*}_{0} b^{*}_{1}}\\\frac{F_{1, 0}}{b^{*}_{0} b^{*}_{1}} & \frac{F_{1, 1}}{\left(b^{*}_{1}\right)^{2}}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}\frac{1}{25} & \frac{1}{15}\\\frac{1}{10} & \frac{1}{9}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Mixed total system flows}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{c}\frac{b_{0} b_{1} F_{0, 1}}{b^{*}_{0} b^{*}_{1}} - \frac{b_{0} b_{1} F_{1, 0}}{b^{*}_{0} b^{*}_{1}}\\\frac{b_{0} b_{1} F_{1, 0}}{b^{*}_{0} b^{*}_{1}} - \frac{b_{0} b_{1} F_{0, 1}}{b^{*}_{0} b^{*}_{1}}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}- \frac{b_{0} b_{1}}{30}\\\frac{b_{0} b_{1}}{30}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Total system flows}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{c}s_{d} \left(\frac{b_{1} F_{0, 1}}{b^{*}_{1}} - \frac{b_{0} F_{1, 0}}{b^{*}_{0}}\right) + s_{l} \left(\frac{b_{0} b_{1} F_{0, 1}}{b^{*}_{0} b^{*}_{1}} - \frac{b_{0} b_{1} F_{1, 0}}{b^{*}_{0} b^{*}_{1}}\right) + s_{r} \left(\frac{b_{0} F_{0, 1}}{b^{*}_{0}} - \frac{b_{1} F_{1, 0}}{b^{*}_{1}}\right)\\s_{d} \left(\frac{b_{0} F_{1, 0}}{b^{*}_{0}} - \frac{b_{1} F_{0, 1}}{b^{*}_{1}}\right) + s_{l} \left(\frac{b_{0} b_{1} F_{1, 0}}{b^{*}_{0} b^{*}_{1}} - \frac{b_{0} b_{1} F_{0, 1}}{b^{*}_{0} b^{*}_{1}}\right) + s_{r} \left(\frac{b_{1} F_{1, 0}}{b^{*}_{1}} - \frac{b_{0} F_{0, 1}}{b^{*}_{0}}\right)\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}s_{d} \left(- \frac{3 b_{0}}{5} + \frac{b_{1}}{3}\right) + s_{r} \left(- \frac{b_{1}}{2} + \frac{2 b_{0}}{5}\right) - \frac{b_{0} b_{1} s_{l}}{30}\\s_{d} \left(- \frac{b_{1}}{3} + \frac{3 b_{0}}{5}\right) + s_{r} \left(\frac{b_{1}}{2} - \frac{2 b_{0}}{5}\right) + \frac{b_{0} b_{1} s_{l}}{30}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Derivative}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{c}p_{0} + s_{d} \left(\frac{b_{1} F_{0, 1}}{b^{*}_{1}} - \frac{b_{0} F_{1, 0}}{b^{*}_{0}}\right) + s_{l} \left(\frac{b_{0} b_{1} F_{0, 1}}{b^{*}_{0} b^{*}_{1}} - \frac{b_{0} b_{1} F_{1, 0}}{b^{*}_{0} b^{*}_{1}}\right) + s_{r} \left(\frac{b_{0} F_{0, 1}}{b^{*}_{0}} - \frac{b_{1} F_{1, 0}}{b^{*}_{1}}\right) - b_{0} \left(\frac{q_{0}}{b^{*}_{0}} + \frac{r_{0}}{b^{*}_{0}}\right)\\p_{1} + s_{d} \left(\frac{b_{0} F_{1, 0}}{b^{*}_{0}} - \frac{b_{1} F_{0, 1}}{b^{*}_{1}}\right) + s_{l} \left(\frac{b_{0} b_{1} F_{1, 0}}{b^{*}_{0} b^{*}_{1}} - \frac{b_{0} b_{1} F_{0, 1}}{b^{*}_{0} b^{*}_{1}}\right) + s_{r} \left(\frac{b_{1} F_{1, 0}}{b^{*}_{1}} - \frac{b_{0} F_{0, 1}}{b^{*}_{0}}\right) - b_{1} \left(\frac{q_{1}}{b^{*}_{1}} + \frac{r_{1}}{b^{*}_{1}}\right)\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}7 - 4 b_{0} + s_{d} \left(- \frac{3 b_{0}}{5} + \frac{b_{1}}{3}\right) + s_{r} \left(- \frac{b_{1}}{2} + \frac{2 b_{0}}{5}\right) - \frac{b_{0} b_{1} s_{l}}{30}\\8 - \frac{11 b_{1}}{3} + s_{d} \left(- \frac{b_{1}}{3} + \frac{3 b_{0}}{5}\right) + s_{r} \left(\frac{b_{1}}{2} - \frac{2 b_{0}}{5}\right) + \frac{b_{0} b_{1} s_{l}}{30}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Writting output file 'plainOutput.txt'}}\end{equation*}%
+\end{document}

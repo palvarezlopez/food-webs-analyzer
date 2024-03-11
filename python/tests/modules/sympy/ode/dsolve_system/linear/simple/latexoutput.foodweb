@@ -1,0 +1,43 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{amsmath}%
+\usepackage{graphicx}%
+%
+%
+%
+\begin{document}%
+\normalsize%
+equations%
+\begin{equation*}\frac{d}{d t} x{\left(t \right)} = x{\left(t \right)} + y{\left(t \right)}\end{equation*}%
+\begin{equation*}\frac{d}{d t} y{\left(t \right)} = x{\left(t \right)} + y{\left(t \right)}\end{equation*}%
+equation system%
+\begin{equation*}\left( \frac{d}{d t} x{\left(t \right)} = x{\left(t \right)} + y{\left(t \right)}, \  \frac{d}{d t} y{\left(t \right)} = x{\left(t \right)} + y{\left(t \right)}\right)\end{equation*}%
+dsolve equation system with initial values 0, 0%
+\begin{equation*}x{\left(t \right)} = 0\end{equation*}%
+\begin{equation*}y{\left(t \right)} = 0\end{equation*}%
+\begin{equation*}\left[ \left[\begin{matrix}0\\0\\0\\0\\0\\0\\0\\0\\0\\0\end{matrix}\right], \  \left[\begin{matrix}0\\0\\0\\0\\0\\0\\0\\0\\0\\0\end{matrix}\right]\right]\end{equation*}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=300px]{image1.png}%
+\end{figure}
+
+%
+dsolve equation system with initial values 1, 2%
+\begin{equation*}x{\left(t \right)} = \frac{3 e^{2 t}}{2} - \frac{1}{2}\end{equation*}%
+\begin{equation*}y{\left(t \right)} = \frac{3 e^{2 t}}{2} + \frac{1}{2}\end{equation*}%
+\begin{equation*}\left[ \left[\begin{matrix}1.0\\10.58358415\\81.39722505\\604.6431902\\4470.936981\\33039.19869\\244131.6871\\1803905.926\\13329165.28\\98489953.21\end{matrix}\right], \  \left[\begin{matrix}2.0\\11.58358415\\82.39722505\\605.6431902\\4471.936981\\33040.19869\\244132.6871\\1803906.926\\13329166.28\\98489954.21\end{matrix}\right]\right]\end{equation*}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=300px]{image2.png}%
+\end{figure}
+
+%
+\end{document}

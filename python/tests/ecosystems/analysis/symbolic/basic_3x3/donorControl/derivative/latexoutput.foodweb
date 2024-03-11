@@ -1,0 +1,68 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{amsmath}%
+%
+%
+%
+\begin{document}%
+\normalsize%
+\begin{equation*}\mathtt{\text{Parsed data from 'foodWebData'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-CRC 'crc\_test3x3'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-Matrix size (n) '3'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-Nodes / compartiments (l) '2'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-Initial biomass (bo):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}10\\11\\12\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Biomass (b):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}10\\11\\12\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Imports (p):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}13\\14\\15\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Exports (q):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}16\\17\\18\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Respiration (r):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}19\\20\\21\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Flow matrix (F):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}1 & 2 & 3\\4 & 5 & 6\\7 & 8 & 9\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Calculating donor control model derivative for foodWebData 'foodWebData'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{Initial consumption intensity matrix: F (/) b0}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{ccc}\frac{F_{0, 0}}{b^{*}_{0}} & \frac{F_{0, 1}}{b^{*}_{1}} & \frac{F_{0, 2}}{b^{*}_{2}}\\\frac{F_{1, 0}}{b^{*}_{0}} & \frac{F_{1, 1}}{b^{*}_{1}} & \frac{F_{1, 2}}{b^{*}_{2}}\\\frac{F_{2, 0}}{b^{*}_{0}} & \frac{F_{2, 1}}{b^{*}_{1}} & \frac{F_{2, 2}}{b^{*}_{2}}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}\frac{1}{10} & \frac{2}{11} & \frac{1}{4}\\\frac{2}{5} & \frac{5}{11} & \frac{1}{2}\\\frac{7}{10} & \frac{8}{11} & \frac{3}{4}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Consumption intensity vector: sum(.x)(initialConsumptionIntensity)}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{c}\frac{F_{0, 0}}{b^{*}_{0}} + \frac{F_{1, 0}}{b^{*}_{0}} + \frac{F_{2, 0}}{b^{*}_{0}}\\\frac{F_{0, 1}}{b^{*}_{1}} + \frac{F_{1, 1}}{b^{*}_{1}} + \frac{F_{2, 1}}{b^{*}_{1}}\\\frac{F_{0, 2}}{b^{*}_{2}} + \frac{F_{1, 2}}{b^{*}_{2}} + \frac{F_{2, 2}}{b^{*}_{2}}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}\frac{6}{5}\\\frac{15}{11}\\\frac{3}{2}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{System inflows vector: initialConsumptionIntensity * b}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{c}\frac{b_{0} F_{0, 0}}{b^{*}_{0}} + \frac{b_{1} F_{0, 1}}{b^{*}_{1}} + \frac{b_{2} F_{0, 2}}{b^{*}_{2}}\\\frac{b_{0} F_{1, 0}}{b^{*}_{0}} + \frac{b_{1} F_{1, 1}}{b^{*}_{1}} + \frac{b_{2} F_{1, 2}}{b^{*}_{2}}\\\frac{b_{0} F_{2, 0}}{b^{*}_{0}} + \frac{b_{1} F_{2, 1}}{b^{*}_{1}} + \frac{b_{2} F_{2, 2}}{b^{*}_{2}}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}\frac{b_{2}}{4} + \frac{b_{0}}{10} + \frac{2 b_{1}}{11}\\\frac{b_{2}}{2} + \frac{2 b_{0}}{5} + \frac{5 b_{1}}{11}\\\frac{3 b_{2}}{4} + \frac{7 b_{0}}{10} + \frac{8 b_{1}}{11}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{System outflows vector: consumptionIntensity (*) b}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}b_{0} \left(\frac{F_{0, 0}}{b^{*}_{0}} + \frac{F_{1, 0}}{b^{*}_{0}} + \frac{F_{2, 0}}{b^{*}_{0}}\right)\\b_{1} \left(\frac{F_{0, 1}}{b^{*}_{1}} + \frac{F_{1, 1}}{b^{*}_{1}} + \frac{F_{2, 1}}{b^{*}_{1}}\right)\\b_{2} \left(\frac{F_{0, 2}}{b^{*}_{2}} + \frac{F_{1, 2}}{b^{*}_{2}} + \frac{F_{2, 2}}{b^{*}_{2}}\right)\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}\frac{6 b_{0}}{5}\\\frac{15 b_{1}}{11}\\\frac{3 b_{2}}{2}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Total system flows: systemInflows - systemOutflows}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{c}- b_{0} \left(\frac{F_{0, 0}}{b^{*}_{0}} + \frac{F_{1, 0}}{b^{*}_{0}} + \frac{F_{2, 0}}{b^{*}_{0}}\right) + \frac{b_{0} F_{0, 0}}{b^{*}_{0}} + \frac{b_{1} F_{0, 1}}{b^{*}_{1}} + \frac{b_{2} F_{0, 2}}{b^{*}_{2}}\\- b_{1} \left(\frac{F_{0, 1}}{b^{*}_{1}} + \frac{F_{1, 1}}{b^{*}_{1}} + \frac{F_{2, 1}}{b^{*}_{1}}\right) + \frac{b_{0} F_{1, 0}}{b^{*}_{0}} + \frac{b_{1} F_{1, 1}}{b^{*}_{1}} + \frac{b_{2} F_{1, 2}}{b^{*}_{2}}\\- b_{2} \left(\frac{F_{0, 2}}{b^{*}_{2}} + \frac{F_{1, 2}}{b^{*}_{2}} + \frac{F_{2, 2}}{b^{*}_{2}}\right) + \frac{b_{0} F_{2, 0}}{b^{*}_{0}} + \frac{b_{1} F_{2, 1}}{b^{*}_{1}} + \frac{b_{2} F_{2, 2}}{b^{*}_{2}}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}- \frac{11 b_{0}}{10} + \frac{b_{2}}{4} + \frac{2 b_{1}}{11}\\\frac{b_{2}}{2} - \frac{10 b_{1}}{11} + \frac{2 b_{0}}{5}\\- \frac{3 b_{2}}{4} + \frac{7 b_{0}}{10} + \frac{8 b_{1}}{11}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Units export: q (/) b0}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{c}\frac{q_{0}}{b^{*}_{0}}\\\frac{q_{1}}{b^{*}_{1}}\\\frac{q_{2}}{b^{*}_{2}}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}\frac{8}{5}\\\frac{17}{11}\\\frac{3}{2}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Units respiration: r (/) b0}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{c}\frac{r_{0}}{b^{*}_{0}}\\\frac{r_{1}}{b^{*}_{1}}\\\frac{r_{2}}{b^{*}_{2}}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}\frac{19}{10}\\\frac{20}{11}\\\frac{7}{4}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Outflows: (unitsExport + unitsRespiration) * b}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}b_{0} \left(\frac{q_{0}}{b^{*}_{0}} + \frac{r_{0}}{b^{*}_{0}}\right)\\b_{1} \left(\frac{q_{1}}{b^{*}_{1}} + \frac{r_{1}}{b^{*}_{1}}\right)\\b_{2} \left(\frac{q_{2}}{b^{*}_{2}} + \frac{r_{2}}{b^{*}_{2}}\right)\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}\frac{7 b_{0}}{2}\\\frac{37 b_{1}}{11}\\\frac{13 b_{2}}{4}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{d(b)/d(t): totalSystemFlows - outflows + imports}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{c}p_{0} - b_{0} \left(\frac{q_{0}}{b^{*}_{0}} + \frac{r_{0}}{b^{*}_{0}}\right) - b_{0} \left(\frac{F_{0, 0}}{b^{*}_{0}} + \frac{F_{1, 0}}{b^{*}_{0}} + \frac{F_{2, 0}}{b^{*}_{0}}\right) + \frac{b_{0} F_{0, 0}}{b^{*}_{0}} + \frac{b_{1} F_{0, 1}}{b^{*}_{1}} + \frac{b_{2} F_{0, 2}}{b^{*}_{2}}\\p_{1} - b_{1} \left(\frac{q_{1}}{b^{*}_{1}} + \frac{r_{1}}{b^{*}_{1}}\right) - b_{1} \left(\frac{F_{0, 1}}{b^{*}_{1}} + \frac{F_{1, 1}}{b^{*}_{1}} + \frac{F_{2, 1}}{b^{*}_{1}}\right) + \frac{b_{0} F_{1, 0}}{b^{*}_{0}} + \frac{b_{1} F_{1, 1}}{b^{*}_{1}} + \frac{b_{2} F_{1, 2}}{b^{*}_{2}}\\p_{2} - b_{2} \left(\frac{q_{2}}{b^{*}_{2}} + \frac{r_{2}}{b^{*}_{2}}\right) - b_{2} \left(\frac{F_{0, 2}}{b^{*}_{2}} + \frac{F_{1, 2}}{b^{*}_{2}} + \frac{F_{2, 2}}{b^{*}_{2}}\right) + \frac{b_{0} F_{2, 0}}{b^{*}_{0}} + \frac{b_{1} F_{2, 1}}{b^{*}_{1}} + \frac{b_{2} F_{2, 2}}{b^{*}_{2}}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}13 - \frac{23 b_{0}}{5} + \frac{b_{2}}{4} + \frac{2 b_{1}}{11}\\14 + \frac{b_{2}}{2} - \frac{47 b_{1}}{11} + \frac{2 b_{0}}{5}\\15 - 4 b_{2} + \frac{7 b_{0}}{10} + \frac{8 b_{1}}{11}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Writting file 'steadyStatesDonorControl.m'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{Writting output file 'plainOutput.txt'}}\end{equation*}%
+\end{document}

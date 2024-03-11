@@ -1,0 +1,59 @@
+full_name:food web tests
+interpreter:python
+filename_convention_scheme:standard
+executable:test.py
+
+# copy files
+copy_test_path:test.py
+# food web datas
+copy_test_path:foodWebData.m
+copy_test_path:Black_Sea_433.m
+copy_test_path:Black_Sea_435.m
+copy_test_path:Black_Sea_691.m
+copy_test_path:Black_Sea_692.m
+copy_test_path:Garonne_221.m
+# used for tests
+copy_test_path:image.png
+
+[collate_file]
+# data generated in foodWebData folder
+plainoutput:out/foodWebData/plainOutput.txt
+latexoutput:out/foodWebData/latexOutput.tex
+pdfoutput:out/foodWebData/latexOutput.pdf
+steadyStatesDonorControl:out/foodWebData/steadyStatesDonorControl.m
+steadyStatesGeneralModel:out/foodWebData/steadyStatesGeneralModel.m
+# images generated in foodWebData folder
+image0:out/foodWebData/image0.png
+image1:out/foodWebData/image1.png
+image2:out/foodWebData/image2.png
+# biomass calculated in ODE and generated in foodWebData folder 
+biomassFinal_07_02:out/foodWebData/biomassFinal_0.7_0.2.m
+biomassFinal_10_00:out/foodWebData/biomassFinal_1.0_0.0.m
+biomassFinal_00_10:out/foodWebData/biomassFinal_0.0_1.0.m
+biomassFinal_00_00:out/foodWebData/biomassFinal_0.0_0.0.m
+biomassFinal_03_02:out/foodWebData/biomassFinal_0.3_0.2.m
+# images generated in root file
+image0:image0.png
+image1:image1.png
+image2:image2.png
+image3:image3.png
+image4:image4.png
+image5:image5.png
+# data generated in root file
+plainoutput:plainOutput.txt
+latexoutput:latexOutput.tex
+pdfoutput:latexOutput.pdf
+# ternary files generated in foodwebDynamics tests
+localStability-Black_Sea_433:out/Black_Sea_433/localStability-Black_Sea_433.png
+localStability-Black_Sea_435:out/Black_Sea_435/localStability-Black_Sea_435.png
+localStability-Black_Sea_691:out/Black_Sea_691/localStability-Black_Sea_691.png
+localStability-Black_Sea_692:out/Black_Sea_692/localStability-Black_Sea_692.png
+localStability-Garonne_221:out/Garonne_221/localStability-Garonne_221.png
+localStability:out/localStability.png
+
+[run_dependent_text]
+pdfoutput:/CreationDate
+pdfoutput:/Creator
+pdfoutput:/ModDate
+pdfoutput:/ID
+stderr:  File "

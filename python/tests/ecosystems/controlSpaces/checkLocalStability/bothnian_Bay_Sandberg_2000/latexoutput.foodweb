@@ -1,0 +1,24 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{amsmath}%
+\usepackage{graphicx}%
+%
+%
+%
+\begin{document}%
+\normalsize%
+\begin{equation*}\mathtt{\text{Writting file 'steadyStatesDonorControl.m'}}\end{equation*}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=300px]{image0.png}%
+\end{figure}
+
+%
+\begin{equation*}\mathtt{\text{Writting output file 'plainOutput.txt'}}\end{equation*}%
+\end{document}

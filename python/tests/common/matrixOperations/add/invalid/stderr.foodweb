@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\Pablo\.texttest\tmp\foodweb.05Feb111804.18056\foodweb\operations\matrix\add\invalid\test.py", line 12, in <module>
+    sp.pprint(mo.add(matrix1, matrix2))
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Repositories\foodweb-dynamics-python\python\src\common\matrixOperations.py", line 19, in add
+    raise Exception("sum only works for matrices with the same size. "
+Exception: sum only works for matrices with the same size. Given 3x3 and 2x2

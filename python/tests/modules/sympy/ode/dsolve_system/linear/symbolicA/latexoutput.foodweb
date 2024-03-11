@@ -1,0 +1,43 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{amsmath}%
+\usepackage{graphicx}%
+%
+%
+%
+\begin{document}%
+\normalsize%
+equations%
+\begin{equation*}\frac{d}{d t} x{\left(t \right)} = 2 x{\left(t \right)} + 5 y{\left(t \right)} + 11\end{equation*}%
+\begin{equation*}\frac{d}{d t} y{\left(t \right)} = 3 x{\left(t \right)} + 7 y{\left(t \right)} + 13\end{equation*}%
+equation system%
+\begin{equation*}\left( \frac{d}{d t} x{\left(t \right)} = 2 x{\left(t \right)} + 5 y{\left(t \right)} + 11, \  \frac{d}{d t} y{\left(t \right)} = 3 x{\left(t \right)} + 7 y{\left(t \right)} + 13\right)\end{equation*}%
+dsolve equation system with initial values 0, 0%
+\begin{equation*}x{\left(t \right)} = - \frac{\left(187 - 15 \sqrt{85}\right) e^{\frac{t \left(9 - \sqrt{85}\right)}{2}} \int\limits^{0} e^{- \frac{9 t}{2}} e^{\frac{\sqrt{85} t}{2}}\, dt}{34} + \frac{\left(187 - 15 \sqrt{85}\right) e^{\frac{t \left(9 - \sqrt{85}\right)}{2}} \int e^{- \frac{t \left(9 - \sqrt{85}\right)}{2}}\, dt}{34} - \frac{\left(15 \sqrt{85} + 187\right) e^{\frac{t \left(9 + \sqrt{85}\right)}{2}} \int\limits^{0} e^{- \frac{9 t}{2}} e^{- \frac{\sqrt{85} t}{2}}\, dt}{34} + \frac{\left(15 \sqrt{85} + 187\right) e^{\frac{t \left(9 + \sqrt{85}\right)}{2}} \int e^{- \frac{t \left(9 + \sqrt{85}\right)}{2}}\, dt}{34}\end{equation*}%
+\begin{equation*}y{\left(t \right)} = - \frac{\left(1105 - 131 \sqrt{85}\right) e^{\frac{t \left(9 - \sqrt{85}\right)}{2}} \int\limits^{0} e^{- \frac{9 t}{2}} e^{\frac{\sqrt{85} t}{2}}\, dt}{170} + \frac{\left(1105 - 131 \sqrt{85}\right) e^{\frac{t \left(9 - \sqrt{85}\right)}{2}} \int e^{- \frac{t \left(9 - \sqrt{85}\right)}{2}}\, dt}{170} - \frac{\left(1105 + 131 \sqrt{85}\right) e^{\frac{t \left(9 + \sqrt{85}\right)}{2}} \int\limits^{0} e^{- \frac{9 t}{2}} e^{- \frac{\sqrt{85} t}{2}}\, dt}{170} + \frac{\left(1105 + 131 \sqrt{85}\right) e^{\frac{t \left(9 + \sqrt{85}\right)}{2}} \int e^{- \frac{t \left(9 + \sqrt{85}\right)}{2}}\, dt}{170}\end{equation*}%
+\begin{equation*}\left[ \left[\begin{matrix}1.0 \cdot 10^{-154}\\9497.87238\\85888720.56\\7.767118587 \cdot 10^{11}\\7.023987762 \cdot 10^{15}\\6.351957104 \cdot 10^{19}\\5.744223995 \cdot 10^{23}\\5.194636672 \cdot 10^{27}\\4.697631947 \cdot 10^{31}\\4.248178902 \cdot 10^{35}\end{matrix}\right], \  \left[\begin{matrix}7.0 \cdot 10^{-155}\\13503.04018\\122129843.3\\1.104448881 \cdot 10^{12}\\9.987790625 \cdot 10^{15}\\9.032193643 \cdot 10^{19}\\8.168024847 \cdot 10^{23}\\7.386536709 \cdot 10^{27}\\6.679818632 \cdot 10^{31}\\6.040716876 \cdot 10^{35}\end{matrix}\right]\right]\end{equation*}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=300px]{image1.png}%
+\end{figure}
+
+%
+dsolve equation system with initial values 1, 2%
+\begin{equation*}x{\left(t \right)} = \frac{\left(- 187 \int\limits^{0} e^{- \frac{9 t}{2}} e^{- \frac{\sqrt{85} t}{2}}\, dt - 15 \sqrt{85} \int\limits^{0} e^{- \frac{9 t}{2}} e^{- \frac{\sqrt{85} t}{2}}\, dt + 17 + 3 \sqrt{85}\right) e^{\frac{t \left(9 + \sqrt{85}\right)}{2}}}{34} + \frac{\left(- 187 \int\limits^{0} e^{- \frac{9 t}{2}} e^{\frac{\sqrt{85} t}{2}}\, dt + 15 \sqrt{85} \int\limits^{0} e^{- \frac{9 t}{2}} e^{\frac{\sqrt{85} t}{2}}\, dt - 3 \sqrt{85} + 17\right) e^{\frac{t \left(9 - \sqrt{85}\right)}{2}}}{34} + \frac{\left(187 - 15 \sqrt{85}\right) e^{\frac{t \left(9 - \sqrt{85}\right)}{2}} \int e^{- \frac{t \left(9 - \sqrt{85}\right)}{2}}\, dt}{34} + \frac{\left(15 \sqrt{85} + 187\right) e^{\frac{t \left(9 + \sqrt{85}\right)}{2}} \int e^{- \frac{t \left(9 + \sqrt{85}\right)}{2}}\, dt}{34}\end{equation*}%
+\begin{equation*}y{\left(t \right)} = - \frac{\left(1105 \int\limits^{0} e^{- \frac{9 t}{2}} e^{- \frac{\sqrt{85} t}{2}}\, dt + 131 \sqrt{85} \int\limits^{0} e^{- \frac{9 t}{2}} e^{- \frac{\sqrt{85} t}{2}}\, dt - 170 - 16 \sqrt{85}\right) e^{\frac{t \left(9 + \sqrt{85}\right)}{2}}}{170} + \frac{\left(- 1105 \int\limits^{0} e^{- \frac{9 t}{2}} e^{\frac{\sqrt{85} t}{2}}\, dt + 131 \sqrt{85} \int\limits^{0} e^{- \frac{9 t}{2}} e^{\frac{\sqrt{85} t}{2}}\, dt - 16 \sqrt{85} + 170\right) e^{\frac{t \left(9 - \sqrt{85}\right)}{2}}}{170} + \frac{\left(1105 - 131 \sqrt{85}\right) e^{\frac{t \left(9 - \sqrt{85}\right)}{2}} \int e^{- \frac{t \left(9 - \sqrt{85}\right)}{2}}\, dt}{170} + \frac{\left(1105 + 131 \sqrt{85}\right) e^{\frac{t \left(9 + \sqrt{85}\right)}{2}} \int e^{- \frac{t \left(9 + \sqrt{85}\right)}{2}}\, dt}{170}\end{equation*}%
+\begin{equation*}\left[ \left[\begin{matrix}1.0\\21375.78296\\193305995.7\\1.748111509 \cdot 10^{12}\\1.580858295 \cdot 10^{16}\\1.429607285 \cdot 10^{20}\\1.292827445 \cdot 10^{24}\\1.169134222 \cdot 10^{28}\\1.057275536 \cdot 10^{32}\\9.561190995 \cdot 10^{35}\end{matrix}\right], \  \left[\begin{matrix}2.0\\30393.40589\\274872315.7\\2.485734931 \cdot 10^{12}\\2.24790848 \cdot 10^{16}\\2.032836435 \cdot 10^{20}\\1.838341732 \cdot 10^{24}\\1.662455605 \cdot 10^{28}\\1.503397649 \cdot 10^{32}\\1.359557804 \cdot 10^{36}\end{matrix}\right]\right]\end{equation*}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=300px]{image2.png}%
+\end{figure}
+
+%
+\end{document}

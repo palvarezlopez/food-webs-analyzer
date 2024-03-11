@@ -1,0 +1,63 @@
+Parsed data from 'foodWebData'
+-CRC 'crc_test3x3'
+-Matrix size (n) '3'
+-Nodes / compartiments (l) '2'
+-Initial biomass (bo):
+[10]
+[  ]
+[11]
+[  ]
+[12]
+-Biomass (b):
+[10]
+[  ]
+[11]
+[  ]
+[12]
+-Imports (p):
+[13]
+[  ]
+[14]
+[  ]
+[15]
+-Exports (q):
+[16]
+[  ]
+[17]
+[  ]
+[18]
+-Respiration (r):
+[19]
+[  ]
+[20]
+[  ]
+[21]
+-Flow matrix (F):
+[1  2  3]
+[       ]
+[4  5  6]
+[       ]
+[7  8  9]
+Calculating donor control model jacobian matrix for foodWebData 'foodWebData'
+Jacobian (Sympy)
+[   q_0     r_0     F_10    F_20                F_01                             F_02             ]
+[- ----- - ----- - ----- - -----               -----                            -----             ]
+[  b^*_0   b^*_0   b^*_0   b^*_0               b^*_1                            b^*_2             ]
+[                                                                                                 ]
+[              F_10                  q_1     r_1     F_01    F_21                F_12             ]
+[             -----               - ----- - ----- - ----- - -----               -----             ]
+[             b^*_0                 b^*_1   b^*_1   b^*_1   b^*_1               b^*_2             ]
+[                                                                                                 ]
+[              F_20                             F_21                  q_2     r_2     F_02    F_12]
+[             -----                            -----               - ----- - ----- - ----- - -----]
+[             b^*_0                            b^*_1                 b^*_2   b^*_2   b^*_2   b^*_2]
+Evaluated
+[-23/5  2/11  1/4]
+[                ]
+[       -47      ]
+[ 2/5   ----  1/2]
+[        11      ]
+[                ]
+[7/10   8/11  -4 ]
+Writting file 'steadyStatesDonorControl.m'
+Writting output file 'plainOutput.txt'

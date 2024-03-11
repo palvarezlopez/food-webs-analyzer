@@ -1,0 +1,20 @@
+Original:
+[1  2  3]
+[       ]
+[4  5  6]
+[       ]
+[7  8  9]
+[11]
+[  ]
+[0 ]
+[  ]
+[13]
+hadamard_division_vector (alternative):
+division by 0 in hadamard_division_vector. Using zero alternative '0.1'
+division by 0 in hadamard_division_vector. Using zero alternative '0.1'
+division by 0 in hadamard_division_vector. Using zero alternative '0.1'
+[1/11  20.0  3/13]
+[                ]
+[4/11  50.0  6/13]
+[                ]
+[7/11  80.0  9/13]

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\Pablo\.texttest\tmp\foodweb.05Feb111804.18056\foodweb\operations\matrix\hadamard_product\invalid\test.py", line 12, in <module>
+    sp.pprint(mo.hadamard_product(matrix1, matrix2))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Repositories\foodweb-dynamics-python\python\src\common\matrixOperations.py", line 63, in hadamard_product
+    raise Exception("hadamard_product only works for matrices with the same size. "
+Exception: hadamard_product only works for matrices with the same size. Given 3x3 and 2x2

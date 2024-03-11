@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "C:\Users\Pablo\.texttest\tmp\foodweb.14Feb112759.14448\foodweb\modules\sympy\ode\dsolve_system\nonLinear\complex\test.py", line 33, in <module>
+    dsolveResult = sp.solvers.ode.systems.dsolve_system(equationSystem, funcs=[x(t),y(t)], t = t, ics={x(0): 0, y(0): 0})
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\sympy\solvers\ode\systems.py", line 2109, in dsolve_system
+    sol = _component_solver(canon_eq, funcs, t)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\sympy\solvers\ode\systems.py", line 1778, in _component_solver
+    sol += _weak_component_solver(wcc, t)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\sympy\solvers\ode\systems.py", line 1759, in _weak_component_solver
+    raise NotImplementedError(filldedent('''
+NotImplementedError: 
+The system of ODEs passed cannot be solved by dsolve_system.

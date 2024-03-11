@@ -1,0 +1,15 @@
+C:\Python311\Lib\site-packages\sympy\simplify\radsimp.py:1131: SymPyDeprecationWarning: 
+
+Using non-Expr arguments in Mul is deprecated (in this case, one of
+the arguments has type 'Tuple').
+
+If you really did intend to use a multiplication or addition operation with
+this object, use the * or + operator instead.
+
+See https://docs.sympy.org/latest/explanation/active-deprecations.html#non-expr-args-deprecated
+for details.
+
+This has been deprecated since SymPy version 1.7. It
+will be removed in a future version of SymPy.
+
+  return Mul(*numer, evaluate=not exact), Mul(*denom, evaluate=not exact)

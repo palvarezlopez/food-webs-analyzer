@@ -1,0 +1,55 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{amsmath}%
+%
+%
+%
+\begin{document}%
+\normalsize%
+\begin{equation*}\mathtt{\text{Parsed data from 'foodWebData'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-CRC 'crc\_test3x3'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-Matrix size (n) '3'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-Nodes / compartiments (l) '2'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-Initial biomass (bo):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}10\\11\\12\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Biomass (b):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}10\\11\\12\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Imports (p):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}13\\14\\15\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Exports (q):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}16\\17\\18\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Respiration (r):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}19\\20\\21\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Flow matrix (F):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}1 & 2 & 3\\4 & 5 & 6\\7 & 8 & 9\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Writting file 'steadyStatesDonorControl.m'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{DonorControl steady states for foodWebData 'foodWebData'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{DonorControl jacobian}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{ccc}- \frac{23}{5} & \frac{2}{11} & \frac{1}{4}\\\frac{2}{5} & - \frac{47}{11} & \frac{1}{2}\\\frac{7}{10} & \frac{8}{11} & -4\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{DonorControl jacobian proportions}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}- \frac{23}{5} & \frac{2}{11} & \frac{1}{4}\\\frac{2}{5} & - \frac{47}{11} & \frac{1}{2}\\\frac{7}{10} & \frac{8}{11} & -4\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{DonorControl jacobian evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}- \frac{23}{5} & \frac{2}{11} & \frac{1}{4}\\\frac{2}{5} & - \frac{47}{11} & \frac{1}{2}\\\frac{7}{10} & \frac{8}{11} & -4\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{DonorControl jacobian inverted}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}\frac{7360}{33339} & \frac{400}{33339} & \frac{170}{11113}\\\frac{286}{11113} & \frac{2673}{11113} & \frac{352}{11113}\\\frac{1444}{33339} & \frac{1528}{33339} & \frac{2872}{11113}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{DonorControl steady state values}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}\frac{36310}{11113}\\\frac{46420}{11113}\\\frac{56468}{11113}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Writting file 'steadyStatesGeneralModel.m'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{GeneralModel steady states for foodWebData 'foodWebData'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{GeneralModel jacobian}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{ccc}- \frac{7}{2} + \frac{s_{r}}{2} - \frac{11 s_{d}}{10} + s_{l} \left(- \frac{b_{2}}{30} - \frac{b_{1}}{55}\right) & - \frac{4 s_{r}}{11} + \frac{2 s_{d}}{11} - \frac{b_{0} s_{l}}{55} & - \frac{7 s_{r}}{12} + \frac{s_{d}}{4} - \frac{b_{0} s_{l}}{30}\\- \frac{s_{r}}{5} + \frac{2 s_{d}}{5} + \frac{b_{1} s_{l}}{55} & - \frac{37}{11} - \frac{10 s_{d}}{11} + \frac{10 s_{r}}{11} + s_{l} \left(- \frac{b_{2}}{66} + \frac{b_{0}}{55}\right) & \frac{s_{d}}{2} - \frac{2 s_{r}}{3} - \frac{b_{1} s_{l}}{66}\\- \frac{3 s_{r}}{10} + \frac{7 s_{d}}{10} + \frac{b_{2} s_{l}}{30} & - \frac{6 s_{r}}{11} + \frac{8 s_{d}}{11} + \frac{b_{2} s_{l}}{66} & - \frac{13}{4} - \frac{3 s_{d}}{4} + \frac{5 s_{r}}{4} + s_{l} \left(\frac{b_{0}}{30} + \frac{b_{1}}{66}\right)\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{GeneralModel jacobian proportions}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}- \frac{23}{5} & \frac{2}{11} & \frac{1}{4}\\\frac{2}{5} & - \frac{47}{11} & \frac{1}{2}\\\frac{7}{10} & \frac{8}{11} & -4\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{GeneralModel jacobian evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}- \frac{23}{5} & \frac{2}{11} & \frac{1}{4}\\\frac{2}{5} & - \frac{47}{11} & \frac{1}{2}\\\frac{7}{10} & \frac{8}{11} & -4\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{GeneralModel jacobian inverted}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}\frac{7360}{33339} & \frac{400}{33339} & \frac{170}{11113}\\\frac{286}{11113} & \frac{2673}{11113} & \frac{352}{11113}\\\frac{1444}{33339} & \frac{1528}{33339} & \frac{2872}{11113}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{GeneralModel steady state values}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}\frac{36310}{11113}\\\frac{46420}{11113}\\\frac{56468}{11113}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Writting file 'biomassFinal\_1.0\_0.0.m'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{Writting output file 'plainOutput.txt'}}\end{equation*}%
+\end{document}

@@ -1,0 +1,43 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{amsmath}%
+\usepackage{graphicx}%
+%
+%
+%
+\begin{document}%
+\normalsize%
+equations%
+\begin{equation*}\frac{d}{d t} x{\left(t \right)} = 0.2 x{\left(t \right)} + 1.5 y{\left(t \right)} + 3.12\end{equation*}%
+\begin{equation*}\frac{d}{d t} y{\left(t \right)} = 0.7 x{\left(t \right)} + 2.1 y{\left(t \right)} + 2.19\end{equation*}%
+equation system%
+\begin{equation*}\left( \frac{d}{d t} x{\left(t \right)} = 0.2 x{\left(t \right)} + 1.5 y{\left(t \right)} + 3.12, \  \frac{d}{d t} y{\left(t \right)} = 0.7 x{\left(t \right)} + 2.1 y{\left(t \right)} + 2.19\right)\end{equation*}%
+dsolve equation system with initial values 0, 0%
+\begin{equation*}x{\left(t \right)} = \frac{1.6748628308478 \int e^{- 2.54731886124821 t}\, dt}{\left(e^{- 2.54731886124821 t}\right)^{1.0}} - \frac{1.6748628308478 \int\limits^{0} e^{- \frac{254731886124821 t}{100000000000000}}\, dt}{\left(e^{- 2.54731886124821 t}\right)^{1.0}} - 1.44513716915219 e^{- 0.247318861248212 t} \int\limits^{0} e^{\frac{61829715312053 t}{250000000000000}}\, dt + 1.4451371691522 e^{- 0.247318861248212 t} \int e^{0.247318861248212 t}\, dt\end{equation*}%
+\begin{equation*}y{\left(t \right)} = \frac{2.62095807523508 \int e^{- 2.54731886124821 t}\, dt}{\left(e^{- 2.54731886124821 t}\right)^{1.0}} - \frac{2.62095807523508 \int\limits^{0} e^{- \frac{254731886124821 t}{100000000000000}}\, dt}{\left(e^{- 2.54731886124821 t}\right)^{1.0}} + 0.430958075235083 e^{- 0.247318861248212 t} \int\limits^{0} e^{\frac{61829715312053 t}{250000000000000}}\, dt - 0.430958075235083 e^{- 0.247318861248212 t} \int e^{0.247318861248212 t}\, dt\end{equation*}%
+\begin{equation*}\left[ \left[\begin{matrix}4.440892099 \cdot 10^{-15}\\9.020924184\\108.8902737\\1372.513514\\17503.17352\\223529.7527\\2855062.838\\36467136.15\\465787831.0\\5949420417.0\end{matrix}\right], \  \left[\begin{matrix}-1.776356839 \cdot 10^{-15}\\11.73134603\\166.1521485\\2142.115382\\27383.51452\\349789.3444\\4467820.148\\57066655.37\\728901698.0\\9310124496.0\end{matrix}\right]\right]\end{equation*}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=300px]{image1.png}%
+\end{figure}
+
+%
+dsolve equation system with initial values 1, 2%
+\begin{equation*}x{\left(t \right)} = - \frac{1.6748628308478 \int\limits^{0} e^{- \frac{254731886124821 t}{100000000000000}}\, dt - 1.23354767363863}{\left(e^{- 2.54731886124821 t}\right)^{1.0}} - \left(1.44513716915219 \int\limits^{0} e^{\frac{61829715312053 t}{250000000000000}}\, dt + 0.233547673638626\right) e^{- 0.247318861248212 t} + \frac{1.6748628308478 \int e^{- 2.54731886124821 t}\, dt}{\left(e^{- 2.54731886124821 t}\right)^{1.0}} + 1.4451371691522 e^{- 0.247318861248212 t} \int e^{0.247318861248212 t}\, dt\end{equation*}%
+\begin{equation*}y{\left(t \right)} = - \frac{2.62095807523508 \int\limits^{0} e^{- \frac{254731886124821 t}{100000000000000}}\, dt - 1.93035314705387}{\left(e^{- 2.54731886124821 t}\right)^{1.0}} + \left(0.430958075235083 \int\limits^{0} e^{\frac{61829715312053 t}{250000000000000}}\, dt + 0.0696468529461328\right) e^{- 0.247318861248212 t} + \frac{2.62095807523508 \int e^{- 2.54731886124821 t}\, dt}{\left(e^{- 2.54731886124821 t}\right)^{1.0}} - 0.430958075235083 e^{- 0.247318861248212 t} \int e^{0.247318861248212 t}\, dt\end{equation*}%
+\begin{equation*}\left[ \left[\begin{matrix}1.0\\24.59442147\\309.9946608\\3942.889906\\50335.44198\\642891.1917\\8211488.534\\104883756.0\\1339660465.0\\1.711123141 \cdot 10^{10}\end{matrix}\right], \  \left[\begin{matrix}2.0\\36.44177081\\481.1215621\\6164.651236\\78762.21166\\1006039.481\\12849979.62\\164130403.6\\2096406842.0\\2.677701082 \cdot 10^{10}\end{matrix}\right]\right]\end{equation*}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=300px]{image2.png}%
+\end{figure}
+
+%
+\end{document}

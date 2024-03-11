@@ -1,0 +1,39 @@
+Parsed data from 'foodWebData'
+-CRC 'crc_test2x2'
+-Matrix size (n) '2'
+-Nodes / compartiments (l) '1'
+-Initial biomass (bo):
+[5]
+[ ]
+[6]
+-Biomass (b):
+[5]
+[ ]
+[6]
+-Imports (p):
+[7]
+[ ]
+[8]
+-Exports (q):
+[9 ]
+[  ]
+[10]
+-Respiration (r):
+[11]
+[  ]
+[12]
+-Flow matrix (F):
+[1  2]
+[    ]
+[3  4]
+Writting file 'steadyStatesDonorControl.m'
+Calculating general jacobian matrix for foodWebData 'foodWebData'
+Jacobian
+[  b_1*s_l   3*s_d   2*s_r         b_0*s_l   s_d   s_r  ]
+[- ------- - ----- + ----- - 4   - ------- + --- - ---  ]
+[     30       5       5              30      3     2   ]
+[                                                       ]
+[   b_1*s_l   3*s_d   2*s_r     b_0*s_l   s_d   s_r   11]
+[   ------- + ----- - -----     ------- - --- + --- - --]
+[      30       5       5          30      3     2    3 ]
+Writting output file 'plainOutput.txt'

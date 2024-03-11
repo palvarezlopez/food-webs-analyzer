@@ -1,0 +1,19 @@
+Writting file 'steadyStatesDonorControl.m'
+Writting file 'steadyStatesDonorControl.m'
+Manual:
+[-23/5  2/11  1/4]
+[                ]
+[       -47      ]
+[ 2/5   ----  1/2]
+[        11      ]
+[                ]
+[7/10   8/11  -4 ]
+Sympy:
+[-23/5  2/11  1/4]
+[                ]
+[       -47      ]
+[ 2/5   ----  1/2]
+[        11      ]
+[                ]
+[7/10   8/11  -4 ]
+Same output

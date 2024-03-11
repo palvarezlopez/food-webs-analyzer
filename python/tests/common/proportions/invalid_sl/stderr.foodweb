@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\Pablo\.texttest\tmp\foodweb.16Feb094513.10064\foodweb\ecosystems\proportions\invalid_sl\test.py", line 6, in <module>
+    inputParameters: InputParameters = InputParameters(
+                                       ^^^^^^^^^^^^^^^^
+  File "C:\Repositories\foodweb-dynamics-python\python\src\common\io\inputParameters.py", line 60, in __init__
+    raise Exception("invalid lotka-volterra proportion")
+Exception: invalid lotka-volterra proportion

@@ -1,0 +1,49 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{amsmath}%
+\usepackage{graphicx}%
+%
+%
+%
+\begin{document}%
+\normalsize%
+equations%
+\begin{equation*}x + y\end{equation*}%
+\begin{equation*}x + y\end{equation*}%
+equation system%
+\begin{equation*}\left( x + y, \  x + y\right)\end{equation*}%
+dsolve equation system with initial values 0, 0%
+\begin{equation*}\mathtt{\text{[ 0.          1.11111111  2.22222222  3.33333333  4.44444444  5.55555556
+  6.66666667  7.77777778  8.88888889 10.        ]}}\end{equation*}%
+\begin{equation*}\mathtt{\text{[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]}}\end{equation*}%
+\begin{equation*}\mathtt{\text{[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]}}\end{equation*}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=300px]{image1.png}%
+\end{figure}
+
+%
+dsolve equation system with initial values 1, 2%
+\begin{equation*}\mathtt{\text{[ 0.          1.11111111  2.22222222  3.33333333  4.44444444  5.55555556
+  6.66666667  7.77777778  8.88888889 10.        ]}}\end{equation*}%
+\begin{equation*}\mathtt{\text{[1.00000000e+00 1.33417216e+01 1.27228838e+02 1.17815801e+03
+ 1.08759373e+04 1.00365245e+05 9.26155966e+05 8.54639946e+06
+ 7.88645921e+07 7.27747822e+08]}}\end{equation*}%
+\begin{equation*}\mathtt{\text{[2.00000000e+00 1.43417216e+01 1.28228838e+02 1.17915801e+03
+ 1.08769373e+04 1.00366245e+05 9.26156966e+05 8.54640046e+06
+ 7.88645931e+07 7.27747823e+08]}}\end{equation*}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=300px]{image2.png}%
+\end{figure}
+
+%
+\end{document}

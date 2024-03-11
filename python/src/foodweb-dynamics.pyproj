@@ -1,0 +1,80 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>4ad1b97f-d7b6-47c1-9109-43932bd16015</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>foodwebDynamics.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>foodweb-dynamics</Name>
+    <RootNamespace>foodweb-dynamics</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <CommandLineArguments>--customFiles Black_Sea_433.m --verbose --outputPlainFile output.txt --outputLatexFile outputLatex --checkLocalStability --numerical --calculateJacobianControlSpace</CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <InterpreterArguments>
+    </InterpreterArguments>
+    <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="common\printer.py" />
+    <Compile Include="common\inputParameters.py" />
+    <Compile Include="common\matrixOperations.py" />
+    <Compile Include="ecosystem\analysis\generalModel.py" />
+    <Compile Include="ecosystem\analysis\donorControlModel.py" />
+    <Compile Include="ecosystem\analysis\stability.py" />
+    <Compile Include="ecosystem\data\symbolicData.py" />
+    <Compile Include="ecosystem\ode\odeChecker.py" />
+    <Compile Include="ecosystem\analysis\steadyStates.py" />
+    <Compile Include="ecosystem\ode\odeSolver.py" />
+    <Compile Include="ecosystem\proportions.py" />
+    <Compile Include="ecosystem\data\foodWebData.py" />
+    <Compile Include="ecosystem\controlSpaces\controlSpaceJacobian.py" />
+    <Compile Include="foodwebDynamics.py" />
+    <Compile Include="ecosystem\ecosystem.py" />
+    <Compile Include="utils\transform.py" />
+    <Compile Include="utils\testFunctions.py" />
+    <Compile Include="utils\ode.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="common\" />
+    <Folder Include="ecosystem\" />
+    <Folder Include="ecosystem\data\" />
+    <Folder Include="ecosystem\analysis\" />
+    <Folder Include="ecosystem\controlSpaces\" />
+    <Folder Include="ecosystem\ode\" />
+    <Folder Include="utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="..\env\">
+      <Id>env</Id>
+      <Version>3.11</Version>
+      <Description>env (Python 3.11 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

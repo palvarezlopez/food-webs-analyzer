@@ -1,0 +1,55 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{amsmath}%
+%
+%
+%
+\begin{document}%
+\normalsize%
+\begin{equation*}\mathtt{\text{Parsed data from 'foodWebData'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-CRC 'crc\_test2x2'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-Matrix size (n) '2'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-Nodes / compartiments (l) '1'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-Initial biomass (bo):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}5\\6\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Biomass (b):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}5\\6\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Imports (p):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}7\\8\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Exports (q):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}9\\10\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Respiration (r):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}11\\12\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Flow matrix (F):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}1 & 2\\3 & 4\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Writting file 'steadyStatesDonorControl.m'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{DonorControl steady states for foodWebData 'foodWebData'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{DonorControl jacobian}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{cc}- \frac{23}{5} & \frac{1}{3}\\\frac{3}{5} & -4\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{DonorControl jacobian proportions}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}- \frac{23}{5} & \frac{1}{3}\\\frac{3}{5} & -4\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{DonorControl jacobian evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}- \frac{23}{5} & \frac{1}{3}\\\frac{3}{5} & -4\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{DonorControl jacobian inverted}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}\frac{20}{91} & \frac{5}{273}\\\frac{3}{91} & \frac{23}{91}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{DonorControl steady state values}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}\frac{460}{273}\\\frac{205}{91}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Writting file 'steadyStatesGeneralModel.m'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{GeneralModel steady states for foodWebData 'foodWebData'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{GeneralModel jacobian}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{cc}-4 - \frac{3 s_{d}}{5} + \frac{2 s_{r}}{5} - \frac{b_{1} s_{l}}{30} & - \frac{s_{r}}{2} + \frac{s_{d}}{3} - \frac{b_{0} s_{l}}{30}\\- \frac{2 s_{r}}{5} + \frac{3 s_{d}}{5} + \frac{b_{1} s_{l}}{30} & - \frac{11}{3} + \frac{s_{r}}{2} - \frac{s_{d}}{3} + \frac{b_{0} s_{l}}{30}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{GeneralModel jacobian proportions}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}- \frac{23}{5} & \frac{1}{3}\\\frac{3}{5} & -4\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{GeneralModel jacobian evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}- \frac{23}{5} & \frac{1}{3}\\\frac{3}{5} & -4\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{GeneralModel jacobian inverted}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}\frac{20}{91} & \frac{5}{273}\\\frac{3}{91} & \frac{23}{91}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{GeneralModel steady state values}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}\frac{460}{273}\\\frac{205}{91}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Writting file 'biomassFinal\_1.0\_0.0.m'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{Writting output file 'plainOutput.txt'}}\end{equation*}%
+\end{document}

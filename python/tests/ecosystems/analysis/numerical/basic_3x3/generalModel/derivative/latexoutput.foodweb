@@ -1,0 +1,48 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{amsmath}%
+%
+%
+%
+\begin{document}%
+\normalsize%
+\begin{equation*}\mathtt{\text{Parsed data from 'foodWebData'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-CRC 'crc\_test3x3'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-Matrix size (n) '3'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-Nodes / compartiments (l) '2'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-Initial biomass (bo):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}10\\11\\12\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Biomass (b):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}10\\11\\12\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Imports (p):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}13\\14\\15\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Exports (q):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}16\\17\\18\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Respiration (r):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}19\\20\\21\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Flow matrix (F):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}1 & 2 & 3\\4 & 5 & 6\\7 & 8 & 9\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Writting file 'steadyStatesDonorControl.m'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{Calculating general model derivative for foodWebData 'foodWebData'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{Donor control initial consumption intensity}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{ccc}\frac{1}{10} & \frac{2}{11} & \frac{1}{4}\\\frac{2}{5} & \frac{5}{11} & \frac{1}{2}\\\frac{7}{10} & \frac{8}{11} & \frac{3}{4}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Donor control total system flows}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{c}- \frac{11 b_{0}}{10} + \frac{b_{2}}{4} + \frac{2 b_{1}}{11}\\\frac{b_{2}}{2} - \frac{10 b_{1}}{11} + \frac{2 b_{0}}{5}\\- \frac{3 b_{2}}{4} + \frac{7 b_{0}}{10} + \frac{8 b_{1}}{11}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Recipient initial consumption intensity}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{ccc}\frac{1}{10} & \frac{1}{5} & \frac{3}{10}\\\frac{4}{11} & \frac{5}{11} & \frac{6}{11}\\\frac{7}{12} & \frac{2}{3} & \frac{3}{4}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Recipient total system flows}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{c}\frac{b_{0}}{2} - \frac{7 b_{2}}{12} - \frac{4 b_{1}}{11}\\- \frac{2 b_{2}}{3} - \frac{b_{0}}{5} + \frac{10 b_{1}}{11}\\- \frac{6 b_{1}}{11} - \frac{3 b_{0}}{10} + \frac{5 b_{2}}{4}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Mixed initial consumption intensity}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{ccc}\frac{1}{100} & \frac{1}{55} & \frac{1}{40}\\\frac{2}{55} & \frac{5}{121} & \frac{1}{22}\\\frac{7}{120} & \frac{2}{33} & \frac{1}{16}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Mixed total system flows}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{c}- \frac{b_{0} b_{2}}{30} - \frac{b_{0} b_{1}}{55}\\- \frac{b_{1} b_{2}}{66} + \frac{b_{0} b_{1}}{55}\\\frac{b_{0} b_{2}}{30} + \frac{b_{1} b_{2}}{66}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Total system flows}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{c}s_{d} \left(- \frac{11 b_{0}}{10} + \frac{b_{2}}{4} + \frac{2 b_{1}}{11}\right) + s_{l} \left(- \frac{b_{0} b_{2}}{30} - \frac{b_{0} b_{1}}{55}\right) + s_{r} \left(\frac{b_{0}}{2} - \frac{7 b_{2}}{12} - \frac{4 b_{1}}{11}\right)\\s_{d} \left(\frac{b_{2}}{2} - \frac{10 b_{1}}{11} + \frac{2 b_{0}}{5}\right) + s_{l} \left(- \frac{b_{1} b_{2}}{66} + \frac{b_{0} b_{1}}{55}\right) + s_{r} \left(- \frac{2 b_{2}}{3} - \frac{b_{0}}{5} + \frac{10 b_{1}}{11}\right)\\s_{d} \left(- \frac{3 b_{2}}{4} + \frac{7 b_{0}}{10} + \frac{8 b_{1}}{11}\right) + s_{l} \left(\frac{b_{0} b_{2}}{30} + \frac{b_{1} b_{2}}{66}\right) + s_{r} \left(- \frac{6 b_{1}}{11} - \frac{3 b_{0}}{10} + \frac{5 b_{2}}{4}\right)\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Derivative}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{c}13 - \frac{7 b_{0}}{2} + s_{d} \left(- \frac{11 b_{0}}{10} + \frac{b_{2}}{4} + \frac{2 b_{1}}{11}\right) + s_{l} \left(- \frac{b_{0} b_{2}}{30} - \frac{b_{0} b_{1}}{55}\right) + s_{r} \left(\frac{b_{0}}{2} - \frac{7 b_{2}}{12} - \frac{4 b_{1}}{11}\right)\\14 - \frac{37 b_{1}}{11} + s_{d} \left(\frac{b_{2}}{2} - \frac{10 b_{1}}{11} + \frac{2 b_{0}}{5}\right) + s_{l} \left(- \frac{b_{1} b_{2}}{66} + \frac{b_{0} b_{1}}{55}\right) + s_{r} \left(- \frac{2 b_{2}}{3} - \frac{b_{0}}{5} + \frac{10 b_{1}}{11}\right)\\15 - \frac{13 b_{2}}{4} + s_{d} \left(- \frac{3 b_{2}}{4} + \frac{7 b_{0}}{10} + \frac{8 b_{1}}{11}\right) + s_{l} \left(\frac{b_{0} b_{2}}{30} + \frac{b_{1} b_{2}}{66}\right) + s_{r} \left(- \frac{6 b_{1}}{11} - \frac{3 b_{0}}{10} + \frac{5 b_{2}}{4}\right)\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Writting output file 'plainOutput.txt'}}\end{equation*}%
+\end{document}

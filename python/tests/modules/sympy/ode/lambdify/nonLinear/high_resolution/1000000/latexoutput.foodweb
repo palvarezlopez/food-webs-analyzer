@@ -1,0 +1,47 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{amsmath}%
+\usepackage{graphicx}%
+%
+%
+%
+\begin{document}%
+\normalsize%
+equations%
+\begin{equation*}- 5 x y + 2 x + 3 y + 19\end{equation*}%
+\begin{equation*}- 13 x y + 11 x + 7 y + 23\end{equation*}%
+equation system%
+\begin{equation*}\left( - 5 x y + 2 x + 3 y + 19, \  - 13 x y + 11 x + 7 y + 23\right)\end{equation*}%
+dsolve equation system with initial values 0, 0%
+\begin{equation*}\mathtt{\text{[0.000000e+00 1.000001e-05 2.000002e-05 ... 9.999980e+00 9.999990e+00
+ 1.000000e+01]}}\end{equation*}%
+\begin{equation*}\mathtt{\text{[0.00000000e+00 1.90005540e-04 3.80021776e-04 ... 4.74144883e+00
+ 4.74144883e+00 4.74144883e+00]}}\end{equation*}%
+\begin{equation*}\mathtt{\text{[0.00000000e+00 2.30018729e-04 4.60074450e-04 ... 1.37550403e+00
+ 1.37550403e+00 1.37550403e+00]}}\end{equation*}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=300px]{image1.png}%
+\end{figure}
+
+%
+dsolve equation system with initial values 1, 2%
+\begin{equation*}\mathtt{\text{[0.000000e+00 1.000001e-05 2.000002e-05 ... 9.999980e+00 9.999990e+00
+ 1.000000e+01]}}\end{equation*}%
+\begin{equation*}\mathtt{\text{[1.         1.00016999 1.00033996 ... 4.74144884 4.74144884 4.74144884]}}\end{equation*}%
+\begin{equation*}\mathtt{\text{[2.         2.00021998 2.00043992 ... 1.37550404 1.37550404 1.37550404]}}\end{equation*}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=300px]{image2.png}%
+\end{figure}
+
+%
+\end{document}

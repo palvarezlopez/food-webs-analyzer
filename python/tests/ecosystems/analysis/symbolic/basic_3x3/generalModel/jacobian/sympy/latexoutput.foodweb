@@ -1,0 +1,36 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{amsmath}%
+%
+%
+%
+\begin{document}%
+\normalsize%
+\begin{equation*}\mathtt{\text{Parsed data from 'foodWebData'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-CRC 'crc\_test3x3'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-Matrix size (n) '3'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-Nodes / compartiments (l) '2'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{-Initial biomass (bo):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}10\\11\\12\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Biomass (b):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}10\\11\\12\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Imports (p):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}13\\14\\15\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Exports (q):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}16\\17\\18\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Respiration (r):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}19\\20\\21\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{-Flow matrix (F):}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}1 & 2 & 3\\4 & 5 & 6\\7 & 8 & 9\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Writting file 'steadyStatesDonorControl.m'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{Calculating general model jacobian matrix for foodWebData 'foodWebData'}}\end{equation*}%
+\begin{equation*}\mathtt{\text{Jacobian (Sympy)}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}s_{d} \left(- \frac{F_{1, 0}}{b^{*}_{0}} - \frac{F_{2, 0}}{b^{*}_{0}}\right) + s_{l} \left(\frac{b_{1} F_{0, 1}}{b^{*}_{0} b^{*}_{1}} + \frac{b_{2} F_{0, 2}}{b^{*}_{0} b^{*}_{2}} - \frac{b_{1} F_{1, 0}}{b^{*}_{0} b^{*}_{1}} - \frac{b_{2} F_{2, 0}}{b^{*}_{0} b^{*}_{2}}\right) + s_{r} \left(\frac{F_{0, 1}}{b^{*}_{0}} + \frac{F_{0, 2}}{b^{*}_{0}}\right) - \frac{q_{0}}{b^{*}_{0}} - \frac{r_{0}}{b^{*}_{0}} & s_{l} \left(\frac{b_{0} F_{0, 1}}{b^{*}_{0} b^{*}_{1}} - \frac{b_{0} F_{1, 0}}{b^{*}_{0} b^{*}_{1}}\right) + \frac{s_{d} F_{0, 1}}{b^{*}_{1}} - \frac{s_{r} F_{1, 0}}{b^{*}_{1}} & s_{l} \left(\frac{b_{0} F_{0, 2}}{b^{*}_{0} b^{*}_{2}} - \frac{b_{0} F_{2, 0}}{b^{*}_{0} b^{*}_{2}}\right) + \frac{s_{d} F_{0, 2}}{b^{*}_{2}} - \frac{s_{r} F_{2, 0}}{b^{*}_{2}}\\s_{l} \left(\frac{b_{1} F_{1, 0}}{b^{*}_{0} b^{*}_{1}} - \frac{b_{1} F_{0, 1}}{b^{*}_{0} b^{*}_{1}}\right) + \frac{s_{d} F_{1, 0}}{b^{*}_{0}} - \frac{s_{r} F_{0, 1}}{b^{*}_{0}} & s_{d} \left(- \frac{F_{0, 1}}{b^{*}_{1}} - \frac{F_{2, 1}}{b^{*}_{1}}\right) + s_{l} \left(\frac{b_{0} F_{1, 0}}{b^{*}_{0} b^{*}_{1}} + \frac{b_{2} F_{1, 2}}{b^{*}_{1} b^{*}_{2}} - \frac{b_{0} F_{0, 1}}{b^{*}_{0} b^{*}_{1}} - \frac{b_{2} F_{2, 1}}{b^{*}_{1} b^{*}_{2}}\right) + s_{r} \left(\frac{F_{1, 0}}{b^{*}_{1}} + \frac{F_{1, 2}}{b^{*}_{1}}\right) - \frac{q_{1}}{b^{*}_{1}} - \frac{r_{1}}{b^{*}_{1}} & s_{l} \left(\frac{b_{1} F_{1, 2}}{b^{*}_{1} b^{*}_{2}} - \frac{b_{1} F_{2, 1}}{b^{*}_{1} b^{*}_{2}}\right) + \frac{s_{d} F_{1, 2}}{b^{*}_{2}} - \frac{s_{r} F_{2, 1}}{b^{*}_{2}}\\s_{l} \left(\frac{b_{2} F_{2, 0}}{b^{*}_{0} b^{*}_{2}} - \frac{b_{2} F_{0, 2}}{b^{*}_{0} b^{*}_{2}}\right) + \frac{s_{d} F_{2, 0}}{b^{*}_{0}} - \frac{s_{r} F_{0, 2}}{b^{*}_{0}} & s_{l} \left(\frac{b_{2} F_{2, 1}}{b^{*}_{1} b^{*}_{2}} - \frac{b_{2} F_{1, 2}}{b^{*}_{1} b^{*}_{2}}\right) + \frac{s_{d} F_{2, 1}}{b^{*}_{1}} - \frac{s_{r} F_{1, 2}}{b^{*}_{1}} & s_{d} \left(- \frac{F_{0, 2}}{b^{*}_{2}} - \frac{F_{1, 2}}{b^{*}_{2}}\right) + s_{l} \left(\frac{b_{0} F_{2, 0}}{b^{*}_{0} b^{*}_{2}} + \frac{b_{1} F_{2, 1}}{b^{*}_{1} b^{*}_{2}} - \frac{b_{0} F_{0, 2}}{b^{*}_{0} b^{*}_{2}} - \frac{b_{1} F_{1, 2}}{b^{*}_{1} b^{*}_{2}}\right) + s_{r} \left(\frac{F_{2, 0}}{b^{*}_{2}} + \frac{F_{2, 1}}{b^{*}_{2}}\right) - \frac{q_{2}}{b^{*}_{2}} - \frac{r_{2}}{b^{*}_{2}}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}- \frac{7}{2} + \frac{s_{r}}{2} - \frac{11 s_{d}}{10} + s_{l} \left(- \frac{b_{2}}{30} - \frac{b_{1}}{55}\right) & - \frac{4 s_{r}}{11} + \frac{2 s_{d}}{11} - \frac{b_{0} s_{l}}{55} & - \frac{7 s_{r}}{12} + \frac{s_{d}}{4} - \frac{b_{0} s_{l}}{30}\\- \frac{s_{r}}{5} + \frac{2 s_{d}}{5} + \frac{b_{1} s_{l}}{55} & - \frac{37}{11} - \frac{10 s_{d}}{11} + \frac{10 s_{r}}{11} + s_{l} \left(- \frac{b_{2}}{66} + \frac{b_{0}}{55}\right) & \frac{s_{d}}{2} - \frac{2 s_{r}}{3} - \frac{b_{1} s_{l}}{66}\\- \frac{3 s_{r}}{10} + \frac{7 s_{d}}{10} + \frac{b_{2} s_{l}}{30} & - \frac{6 s_{r}}{11} + \frac{8 s_{d}}{11} + \frac{b_{2} s_{l}}{66} & - \frac{13}{4} - \frac{3 s_{d}}{4} + \frac{5 s_{r}}{4} + s_{l} \left(\frac{b_{0}}{30} + \frac{b_{1}}{66}\right)\end{matrix}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Writting output file 'plainOutput.txt'}}\end{equation*}%
+\end{document}

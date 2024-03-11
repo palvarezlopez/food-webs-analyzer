@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\Pablo\.texttest\tmp\foodweb.05Feb111804.18056\foodweb\operations\matrix\diagonal\invalid\test.py", line 11, in <module>
+    sp.pprint(mo.diagonal(matrix))
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Repositories\foodweb-dynamics-python\python\src\common\matrixOperations.py", line 184, in diagonal
+    raise Exception("this method only works for vector matrix (1xn) or (nx1). Given " + str(matrix.cols) + "x" + str(matrix.rows))
+Exception: this method only works for vector matrix (1xn) or (nx1). Given 2x2

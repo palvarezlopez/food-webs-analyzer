@@ -1,0 +1,43 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{amsmath}%
+\usepackage{graphicx}%
+%
+%
+%
+\begin{document}%
+\normalsize%
+equations%
+\begin{equation*}5 x y + 2 x + 3 y + 19\end{equation*}%
+\begin{equation*}13 x y + 11 x + 7 y + 23\end{equation*}%
+equation system%
+\begin{equation*}\left( 5 x y + 2 x + 3 y + 19, \  13 x y + 11 x + 7 y + 23\right)\end{equation*}%
+dsolve equation system with initial values 0, 0%
+\begin{equation*}\mathtt{\text{[0.]}}\end{equation*}%
+\begin{equation*}\mathtt{\text{[0.]}}\end{equation*}%
+\begin{equation*}\mathtt{\text{[0.]}}\end{equation*}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=300px]{image1.png}%
+\end{figure}
+
+%
+dsolve equation system with initial values 1, 2%
+\begin{equation*}\mathtt{\text{[0.]}}\end{equation*}%
+\begin{equation*}\mathtt{\text{[1.]}}\end{equation*}%
+\begin{equation*}\mathtt{\text{[2.]}}\end{equation*}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=300px]{image2.png}%
+\end{figure}
+
+%
+\end{document}

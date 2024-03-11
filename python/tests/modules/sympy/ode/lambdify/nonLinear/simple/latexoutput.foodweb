@@ -1,0 +1,44 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{amsmath}%
+\usepackage{graphicx}%
+%
+%
+%
+\begin{document}%
+\normalsize%
+equations%
+\begin{equation*}x y\end{equation*}%
+\begin{equation*}x^{2} + y^{2}\end{equation*}%
+equation system%
+\begin{equation*}\left( x y, \  x^{2} + y^{2}\right)\end{equation*}%
+dsolve equation system with initial values 0, 0%
+\begin{equation*}\mathtt{\text{[ 0.          1.11111111  2.22222222  3.33333333  4.44444444  5.55555556
+  6.66666667  7.77777778  8.88888889 10.        ]}}\end{equation*}%
+\begin{equation*}\mathtt{\text{[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]}}\end{equation*}%
+\begin{equation*}\mathtt{\text{[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]}}\end{equation*}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=300px]{image1.png}%
+\end{figure}
+
+%
+dsolve equation system with initial values 1, 2%
+\begin{equation*}\mathtt{\text{[0.]}}\end{equation*}%
+\begin{equation*}\mathtt{\text{[1.]}}\end{equation*}%
+\begin{equation*}\mathtt{\text{[2.]}}\end{equation*}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=300px]{image2.png}%
+\end{figure}
+
+%
+\end{document}

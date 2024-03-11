@@ -1,0 +1,6 @@
+[Reported by Windows at 22Feb09:50:02]
+search_string:raise Exception("different output")
+search_file:stderr
+ignore_other_errors:1
+full_description:Precision difference in calculation #28
+brief_description:Precision difference in calculation

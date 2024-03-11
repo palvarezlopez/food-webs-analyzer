@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\Pablo\.texttest\tmp\foodweb.16Feb094405.7492\foodweb\ecosystems\proportions\invalid_sr\test.py", line 6, in <module>
+    inputParameters: InputParameters = InputParameters(
+                                       ^^^^^^^^^^^^^^^^
+  File "C:\Repositories\foodweb-dynamics-python\python\src\common\io\inputParameters.py", line 58, in __init__
+    raise Exception("invalid recipient proportion")
+Exception: invalid recipient proportion

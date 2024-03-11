@@ -1,0 +1,19 @@
+Writting file 'steadyStatesDonorControl.m'
+Writting file 'steadyStatesDonorControl.m'
+Manual:
+[  b_1*s_l   3*s_d   2*s_r         b_0*s_l   s_d   s_r  ]
+[- ------- - ----- + ----- - 4   - ------- + --- - ---  ]
+[     30       5       5              30      3     2   ]
+[                                                       ]
+[   b_1*s_l   3*s_d   2*s_r     b_0*s_l   s_d   s_r   11]
+[   ------- + ----- - -----     ------- - --- + --- - --]
+[      30       5       5          30      3     2    3 ]
+Sympy:
+[  b_1*s_l   3*s_d   2*s_r         b_0*s_l   s_d   s_r  ]
+[- ------- - ----- + ----- - 4   - ------- + --- - ---  ]
+[     30       5       5              30      3     2   ]
+[                                                       ]
+[   b_1*s_l   3*s_d   2*s_r     b_0*s_l   s_d   s_r   11]
+[   ------- + ----- - -----     ------- - --- + --- - --]
+[      30       5       5          30      3     2    3 ]
+Same output
