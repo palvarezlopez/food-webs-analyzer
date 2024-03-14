@@ -1,5 +1,8 @@
+REM specify <repository>/python/src as a python source
+SET PYTHONPATH=..\src\
+
 :mypyCommand
-python -m mypy ..\Src\foodweb_dynamics.py --disallow-untyped-defs --extra-checks
+python -m mypy ..\src\foodwebDynamics.py --disallow-untyped-defs --extra-checks
 pause
 cls
 goto mypyCommand
