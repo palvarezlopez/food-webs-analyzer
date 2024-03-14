@@ -125,7 +125,7 @@ class InputParameters:
         return (self.proportionSd == 1 and self.proportionSr == 0)
 
     # data folder
-    dataFolder: str = os.getcwd() + "/../../dat";
+    dataFolder: str = os.getcwd() + "/../data";
 
     # check if process only a certain file (placed in dat folder)
     customFiles: str = ""

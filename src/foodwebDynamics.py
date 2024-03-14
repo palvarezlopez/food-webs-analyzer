@@ -26,25 +26,30 @@ class FoodwebDynamics:
 
     # read ecosystem datas from directoryinputParameters
     def readFoodWebDatas(self) -> None:
-        # continue depending if we're loading a list of specific foodWebDatas or all self.ecosystems
-        if (self.inputParameters.customFiles == ""):
-            # print info
-            print("Reading all ecosystem data from '" + self.inputParameters.dataFolder + "'")
-            # get all food web data from files
-            for foodWebFile in os.listdir(self.inputParameters.dataFolder):
-                # filter by extension
-                if ".m" in foodWebFile or ".mat" in foodWebFile:
-                    print("Reading file " + foodWebFile + "...")
-                    self.ecosystems.append(Ecosystem(self.inputParameters, self.printer, foodWebFile, False))
-                    print("Finished.")
+        # first check if data folder exist
+        if os.path.isdir(self.inputParameters.dataFolder):
+            # continue depending if we're loading a list of specific foodWebDatas or all self.ecosystems
+            if (self.inputParameters.customFiles == ""):
+                # print info
+                print("Reading all ecosystem data from '" + self.inputParameters.dataFolder + "'")
+                # get all food web data from files
+                for foodWebFile in os.listdir(self.inputParameters.dataFolder):
+                    # filter by extension
+                    if ".m" in foodWebFile or ".mat" in foodWebFile:
+                        print("Reading file " + foodWebFile + "...")
+                        self.ecosystems.append(Ecosystem(self.inputParameters, self.printer, foodWebFile, False))
+                        print("Finished.")
+            else:
+                # print info
+                print("Reading single ecosystem data '" + self.inputParameters.customFiles + "' from '" + self.inputParameters.dataFolder + "'")
+                # obtain files
+                files = self.inputParameters.customFiles.split(',')
+                # process every file
+                for file in files:
+                    self.ecosystems.append(Ecosystem(self.inputParameters, self.printer, file, False))
         else:
             # print info
-            print("Reading single ecosystem data '" + self.inputParameters.customFiles + "' from '" + self.inputParameters.dataFolder + "'")
-            # obtain files
-            files = self.inputParameters.customFiles.split(',')
-            # process every file
-            for file in files:
-                self.ecosystems.append(Ecosystem(self.inputParameters, self.printer, file, False))
+            print("Folder '" + self.inputParameters.dataFolder + "' doesn't exist")
 
     # generate output ternaries
     def generateOutputTernaries(self) -> None:

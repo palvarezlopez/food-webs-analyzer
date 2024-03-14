@@ -16,7 +16,7 @@
     <InterpreterId>
     </InterpreterId>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
-    <CommandLineArguments>--customFiles Black_Sea_433.m --verbose --outputPlainFile output.txt --outputLatexFile outputLatex --checkLocalStability --numerical --calculateJacobianControlSpace</CommandLineArguments>
+    <CommandLineArguments>--verbose --checkBalancing</CommandLineArguments>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
     <InterpreterArguments>
     </InterpreterArguments>
