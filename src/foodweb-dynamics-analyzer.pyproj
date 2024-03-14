@@ -3,16 +3,18 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4ad1b97f-d7b6-47c1-9109-43932bd16015</ProjectGuid>
-    <ProjectHome>.</ProjectHome>
+    <ProjectHome>
+    </ProjectHome>
     <StartupFile>foodwebDynamics.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>foodweb-dynamics</Name>
+    <Name>foodweb-dynamics-analyzer</Name>
     <RootNamespace>foodweb-dynamics</RootNamespace>
     <IsWindowsApplication>False</IsWindowsApplication>
-    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>
+    </InterpreterId>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
     <CommandLineArguments>--customFiles Black_Sea_433.m --verbose --outputPlainFile output.txt --outputLatexFile outputLatex --checkLocalStability --numerical --calculateJacobianControlSpace</CommandLineArguments>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
@@ -56,17 +58,6 @@
     <Folder Include="ecosystem\controlSpaces\" />
     <Folder Include="ecosystem\ode\" />
     <Folder Include="utils\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Interpreter Include="..\env\">
-      <Id>env</Id>
-      <Version>3.11</Version>
-      <Description>env (Python 3.11 (64-bit))</Description>
-      <InterpreterPath>Scripts\python.exe</InterpreterPath>
-      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
-      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
-      <Architecture>X64</Architecture>
-    </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
