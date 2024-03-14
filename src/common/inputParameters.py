@@ -31,6 +31,8 @@ class InputParameters:
             elif (arguments[i] == "--useSympyJacobian"):
                 self.useSympyJacobian = True
             # tasks
+            elif (arguments[i] == "--checkBalancing"):
+                self.checkBalancing = True
             elif (arguments[i] == "--calculateDonorControlModel"):
                 self.calculateDonorControlModel = True
             elif (arguments[i] == "--calculateGeneralModel"):
@@ -137,6 +139,9 @@ class InputParameters:
     # random seed (by default None)
     randomSeed: float = None
 
+    # check if the input data is balanced
+    checkBalancing: bool = False
+
     # calculate donor control model
     calculateDonorControlModel: bool = False
 
@@ -156,7 +161,7 @@ class InputParameters:
     numerical: bool = False
 
     # check if use sympy jacobian
-    useSympyJacobian: bool = False;
+    useSympyJacobian: bool = True;
 
     # set proportion donor-control
     proportionSd: float = 0.7;

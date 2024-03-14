@@ -2,6 +2,7 @@
 from common.inputParameters import InputParameters
 from common.printer import Printer
 from ecosystem.ode.odeSolver import ODESolver
+from ecosystem.balancing import Balancing
 from ecosystem.proportions import Proportions
 from ecosystem.analysis.donorControlModel import DonorControlModel
 from ecosystem.analysis.generalModel import GeneralModel
@@ -23,6 +24,9 @@ class Ecosystem:
         # declare proportions associated with this food web data
         self.proportions = Proportions()
         # calculate donor control model
+        if (inputParameters.checkBalancing):
+            self.balancing = Balancing(inputParameters, printer, self.foodWebData)
+        # calculate donor control model
         if (inputParameters.calculateDonorControlModel):
             self.donorControlModel = DonorControlModel(inputParameters, printer, self.symbolicData, self.foodWebData)
         # calculate general model
@@ -40,6 +44,12 @@ class Ecosystem:
     # symbolic data
     symbolicData: SymbolicData
 
+    # proportions
+    proportions: Proportions
+
+    # balancing
+    balancing: Balancing
+
     # donor control model (either analytic or graphic)
     donorControlModel: DonorControlModel
 
@@ -48,6 +58,3 @@ class Ecosystem:
 
     # ODE Solver
     odeSolver: ODESolver
-
-    # proportions
-    proportions: Proportions
