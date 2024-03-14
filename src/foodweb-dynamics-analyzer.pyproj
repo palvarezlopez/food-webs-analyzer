@@ -41,6 +41,7 @@
     <Compile Include="ecosystem\ode\odeChecker.py" />
     <Compile Include="ecosystem\analysis\steadyStates.py" />
     <Compile Include="ecosystem\ode\odeSolver.py" />
+    <Compile Include="ecosystem\balancing.py" />
     <Compile Include="ecosystem\proportions.py" />
     <Compile Include="ecosystem\data\foodWebData.py" />
     <Compile Include="ecosystem\controlSpaces\controlSpaceJacobian.py" />
