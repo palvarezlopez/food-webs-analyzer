@@ -1,0 +1,18 @@
+[project]
+name = "foodWebsAnalyzer"
+version = "0.1"
+authors = [
+  { name="Pablo Alvarez Lopez", email="pablo.alvarezlopez@dlr.de" },
+]
+description = "A small example package"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/palvarezlopez/foodWebsAnalyzer"
+Issues = "https://github.com/palvarezlopez/foodWebsAnalyzer/issues"
