@@ -1,5 +1,5 @@
 :mypyCommand
-python -m mypy foodwebDynamics.py --disallow-untyped-defs --extra-checks
+python -m mypy foodWebsAnalyzer.py --disallow-untyped-defs --extra-checks
 pause
 cls
 goto mypyCommand

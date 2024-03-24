@@ -1,7 +1,7 @@
-from foodwebDynamics import FoodwebDynamics
+from foodWebsAnalyzer import foodWebsAnalyzer
 
 # create a instance of foodweb dynamics    
-FoodwebDynamics([
+foodWebsAnalyzer([
     "--dataFolder", ".",
     "--checkLocalStability"
     ])

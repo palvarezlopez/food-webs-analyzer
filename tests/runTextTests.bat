@@ -2,7 +2,7 @@
 REM set TextTest executable
 SET TEXTTESTPY=texttest.exe
 REM specify <repository>/src as a python source
-SET PYTHONPATH=..\src\
+SET PYTHONPATH=..\foodWebsAnalyzer\
 REM set python executable
 SET PYTHON=python
 REM init textest
