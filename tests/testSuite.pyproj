@@ -11,8 +11,7 @@
     <OutputPath>.</OutputPath>
     <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
-    <InterpreterId>
-    </InterpreterId>
+    <InterpreterId>MSBuild|.venv|$(MSBuildProjectFullPath)</InterpreterId>
     <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
     <CommandLineArguments>C:\Repositories\foodweb-dynamics-python\python\tests\functions\test\test.py</CommandLineArguments>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
@@ -1563,6 +1562,17 @@
     <Compile Include="modules\sympy\symbolic\simplify\test.py" />
     <Compile Include="modules\ternary\proportions\test.py" />
     <Compile Include="modules\ternary\shannonEntropy\test.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="..\foodWebsAnalyzer\.venv\">
+      <Id>.venv</Id>
+      <Version>3.10</Version>
+      <Description>.venv (Python 3.10 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
 </Project>
