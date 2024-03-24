@@ -5,12 +5,12 @@
     <ProjectGuid>4ad1b97f-d7b6-47c1-9109-43932bd16015</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>foodwebDynamics.py</StartupFile>
+    <StartupFile>foodwebsAnalyzer.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>foodweb-dynamics-analyzer</Name>
+    <Name>foodwebsAnalyzer</Name>
     <RootNamespace>foodweb-dynamics</RootNamespace>
     <IsWindowsApplication>False</IsWindowsApplication>
     <InterpreterId>
@@ -45,7 +45,7 @@
     <Compile Include="ecosystem\proportions.py" />
     <Compile Include="ecosystem\data\foodWebData.py" />
     <Compile Include="ecosystem\controlSpaces\controlSpaceJacobian.py" />
-    <Compile Include="foodwebDynamics.py" />
+    <Compile Include="foodwebsAnalyzer.py" />
     <Compile Include="ecosystem\ecosystem.py" />
     <Compile Include="utils\transform.py" />
     <Compile Include="utils\testFunctions.py" />

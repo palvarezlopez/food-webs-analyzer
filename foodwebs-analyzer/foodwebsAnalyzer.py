@@ -10,8 +10,8 @@ from ecosystem.analysis.generalModel import GeneralModel
 from ecosystem.analysis.stability import Stability
 
 
-# class food web dynamics
-class FoodwebDynamics:
+# class food web analyzer
+class FoodwebsAnalyzer:
 
     # Initializing, receive io parameters and symbolic data
     def __init__(self, arguments: str) -> None:
@@ -85,4 +85,4 @@ class FoodwebDynamics:
 # main function
 if __name__ == '__main__':
     # simply create a instance of foodweb dynamics    
-    FoodwebDynamics(sys.argv)
+    FoodwebsAnalyzer(sys.argv)
