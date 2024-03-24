@@ -1,5 +1,4 @@
 # extensions
-*.asv
 *.m~
 *.pyc
 
@@ -8,11 +7,5 @@
 *.vs
 *.mypy_cache
 
-# specific matlab folders
-/matlab_kokila/out
-
 # specific python folders
-/python/env
-
-# specific files generated during debugging and testing
-/python/src/out
+.venv
