@@ -5,6 +5,6 @@ foodwebviz is a Python package for the analysis and visualization of throphic ne
 """
 
 # Import foodwebviz objects
-from controlSpaces.controlSpaceJacobian import *
+from foodWebsAnalyzer.ecosystems.controlSpaces.controlSpaceJacobian import *
 
 __version__ = "0.1"

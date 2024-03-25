@@ -5,7 +5,7 @@ foodwebviz is a Python package for the analysis and visualization of throphic ne
 """
 
 # Import foodwebviz objects
-from data.foodWebData import *
-from data.symbolicData import *
+from foodWebsAnalyzer.ecosystems.data.foodWebData import *
+from foodWebsAnalyzer.ecosystems.data.symbolicData import *
 
 __version__ = "0.1"
