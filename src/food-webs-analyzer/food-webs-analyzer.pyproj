@@ -60,7 +60,7 @@
     <Folder Include="utils\" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include=".venv\">
+    <Interpreter Include="..\.venv\">
       <Id>.venv</Id>
       <Version>3.10</Version>
       <Description>.venv (Python 3.10 (64-bit))</Description>

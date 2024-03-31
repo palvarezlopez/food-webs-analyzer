@@ -1564,7 +1564,7 @@
     <Compile Include="modules\ternary\shannonEntropy\test.py" />
   </ItemGroup>
   <ItemGroup>
-    <InterpreterReference Include="MSBuild|.venv|D:\foodwebsAnalyzer\foodWebsAnalyzer\foodWebsAnalyzer.pyproj" />
+    <InterpreterReference Include="MSBuild|.venv|D:\food-webs-analyzer\src\food-webs-analyzer\food-webs-analyzer.pyproj" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
 </Project>
