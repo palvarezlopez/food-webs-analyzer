@@ -13,7 +13,7 @@ from foodWebsAnalyzer.ecosystems.analysis.stability import Stability
 class FoodWebsAnalyzer:
 
     # Initializing, receive io parameters and symbolic data
-    def __init__(self, arguments: str) -> None:
+    def __init__(self, arguments: list[str]) -> None:
         # first init input parameters
         self.inputParameters = InputParameters(arguments)
         # init self.printer
