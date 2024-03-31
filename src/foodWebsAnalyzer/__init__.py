@@ -80,8 +80,3 @@ class FoodWebsAnalyzer:
 
     # list of food web datas
     ecosystems: list[Ecosystem] = []
-   
-# main function
-if __name__ == '__main__':
-    # simply create a instance of foodweb dynamics    
-    FoodWebsAnalyzer(sys.argv)

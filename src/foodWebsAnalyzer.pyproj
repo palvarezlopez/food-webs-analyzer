@@ -5,7 +5,7 @@
     <ProjectGuid>4ad1b97f-d7b6-47c1-9109-43932bd16015</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>foodWebsAnalyzer\__init__.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -49,6 +49,7 @@
     <Compile Include="foodWebsAnalyzer\utils\testFunctions.py" />
     <Compile Include="foodWebsAnalyzer\utils\ode.py" />
     <Compile Include="foodWebsAnalyzer\__init__.py" />
+    <Compile Include="main.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="foodWebsAnalyzer\" />
