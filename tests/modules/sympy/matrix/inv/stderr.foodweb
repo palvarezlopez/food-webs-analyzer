@@ -1,16 +1,12 @@
 Traceback (most recent call last):
-  File "C:\Users\Pablo\.texttest\tmp\foodweb.05Feb111804.18056\foodweb\operations\sympy\matrix\inv\test.py", line 28, in <module>
+  File "C:\Users\Palcraft\.texttest\tmp\foodweb.31Mar184906.2744\foodweb\modules\sympy\matrix\inv\test.py", line 28, in <module>
     sp.pprint(B.inv())
-              ^^^^^^^
-  File "C:\Python311\Lib\site-packages\sympy\matrices\matrices.py", line 2177, in inv
+  File "C:\Python310\lib\site-packages\sympy\matrices\matrices.py", line 2177, in inv
     return _inv(self, method=method, iszerofunc=iszerofunc,
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\sympy\matrices\inverse.py", line 459, in _inv
+  File "C:\Python310\lib\site-packages\sympy\matrices\inverse.py", line 459, in _inv
     rv = M.inverse_GE(iszerofunc=iszerofunc)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\sympy\matrices\matrices.py", line 2162, in inverse_GE
+  File "C:\Python310\lib\site-packages\sympy\matrices\matrices.py", line 2162, in inverse_GE
     return _inv_GE(self, iszerofunc=iszerofunc)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\sympy\matrices\inverse.py", line 245, in _inv_GE
+  File "C:\Python310\lib\site-packages\sympy\matrices\inverse.py", line 245, in _inv_GE
     raise NonInvertibleMatrixError("Matrix det == 0; not invertible.")
 sympy.matrices.common.NonInvertibleMatrixError: Matrix det == 0; not invertible.
