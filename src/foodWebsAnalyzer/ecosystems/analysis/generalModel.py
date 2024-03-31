@@ -85,7 +85,7 @@ class GeneralModel:
         self.db_dt = sp.Matrix(sp.ZeroMatrix(n, 1))
         # calculate derivative
         for i in range(0, n):
-            self.db_dt[i, 0] = self.totalSystemFlows[i, 0] - donorControlModel.outflows[i, 0] + symbolicData.imports[i, 0]
+            self.db_dt[i, 0] = self.totalSystemFlows[i, 0] - donorControlModel.consumptionOutputs[i, 0] + symbolicData.imports[i, 0]
         # print info
         if (inputParameters.verbose or inputParameters.verboseGeneralModelDerivative):
             printer.printInfo("Calculating general model derivative for foodWebData '" + foodWebData.food_web_filename + "'")

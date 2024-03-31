@@ -14,67 +14,74 @@ class DonorControlModel:
 
     # initializing, receive io parameters and symbolic data
     def __init__(self, inputParameters: InputParameters, printer: Printer, symbolicData: SymbolicData, foodWebData: FoodWebData) -> None:
+        # calculate consumption outputs
+        self.calculateConsumptionOutputs(inputParameters, printer, symbolicData, foodWebData)
         # calculate derivative
         self.calculateDerivative(inputParameters, printer, symbolicData, foodWebData)
         # calculate fixed points
         self.calculateFixedPoints(inputParameters, printer, symbolicData, foodWebData)
         # calculate jacobian
-        self.calculateJacobian(inputParameters, printer, symbolicData, foodWebData)
+        #self.calculateJacobian(inputParameters, printer, symbolicData, foodWebData)
         # calculate steady states
-        self.steadyStates = SteadyStates(inputParameters, printer, "DonorControl", self.jacobian, symbolicData, foodWebData)
+        #self.steadyStates = SteadyStates(inputParameters, printer, "DonorControl", self.jacobian, symbolicData, foodWebData)
 
+    # calculate consumption outputs
+    def calculateConsumptionOutputs(self, inputParameters: InputParameters, printer: Printer, symbolicData: SymbolicData, foodWebData: FoodWebData) -> None:
+        # get common size n
+        n: int = foodWebData.n
+        # declare consumption matrix
+        self.consumptionOutputs = sp.Matrix(sp.ZeroMatrix(n, n))
+        # calculate consumption outputs
+        for i in range(0, n):
+            self.consumptionOutputs[i, 0] = (symbolicData.exports[i, 0] + symbolicData.respiration[i, 0]) / symbolicData.initialBiomass[i, 0];
+        # print info
+        if (inputParameters.verbose or inputParameters.verboseGeneralModelDerivative):
+            printer.printInfo("Calculating consumption outputs for foodWebData '" + foodWebData.food_web_filename + "'")
+            # donor control
+            printer.printMatrixEvaluated(
+                "Consumption outputs",
+                self.consumptionOutputs, symbolicData.getFoodWebDataSubsValues(foodWebData))        
+        
     # calculate donor control model derivative
     def calculateDerivative(self, inputParameters: InputParameters, printer: Printer, symbolicData: SymbolicData, foodWebData: FoodWebData) -> None:
-        # initial consumption intensity matrix: F (/) b0
-        self.initialConsumptionIntensity = mo.hadamard_division_vector(symbolicData.flowMatrix, symbolicData.initialBiomass);
-        # consumption intensity vector: sum(.x)(initialConsumptionIntensity)
-        self.consumptionIntensity = mo.sumatorial_dotx(self.initialConsumptionIntensity)
-        # system inflows vector: initialConsumptionIntensity * b
-        self.systemInflows = mo.product(self.initialConsumptionIntensity, symbolicData.biomass)
-        # system outflows vector: consumptionIntensity (*) b
-        self.systemOutflows = mo.hadamard_product(self.consumptionIntensity, symbolicData.biomass)
-        # total system flows: systemInflows - systemOutflows
-        self.totalSystemFlows = mo.substract(self.systemInflows, self.systemOutflows)
-        # units export: q (/) b0
-        self.unitsExport = mo.hadamard_division(symbolicData.exports, symbolicData.initialBiomass)
-        # units respiration: r (/) b0
-        self.unitsRespiration = mo.hadamard_division(symbolicData.respiration, symbolicData.initialBiomass)
-        # outflows: (unitsExport + unitsRespiration) * b
-        self.outflows = mo.hadamard_product(mo.add(self.unitsExport, self.unitsRespiration), symbolicData.biomass)
-        # calculate d(b)/d(t): totalSystemFlows - outflows + imports
-        self.db_dt = mo.add(mo.substract(self.totalSystemFlows, self.outflows), symbolicData.imports)
+        # get common size n
+        n: int = foodWebData.n
+        # declare consumption matrix
+        self.donorControlInitialConsumptionIntensity = sp.Matrix(sp.ZeroMatrix(n, n))
+        # calculate consumptions
+        for i in range(0, n):
+            for j in range(0, n):
+                self.donorControlInitialConsumptionIntensity[i,j] = (symbolicData.flowMatrix[i,j] / symbolicData.initialBiomass[j, 0])
+        # init total system flows
+        self.donorControlTotalSystemFlows = sp.Matrix(sp.ZeroMatrix(n, 1))
+        # calculate total system flows
+        for i in range(0, n):
+            # declare partial sums
+            sumDonorControl = 0
+            for j in range(0, n):
+                sumDonorControl += ((self.donorControlInitialConsumptionIntensity[i,j] * symbolicData.biomass[j, 0]) -
+                                    (self.donorControlInitialConsumptionIntensity[j,i] * symbolicData.biomass[i, 0]))
+            # add sums into total system flows
+            self.donorControlTotalSystemFlows[i, 0] = sumDonorControl
+        # init derivative
+        self.db_dt = sp.Matrix(sp.ZeroMatrix(n, 1))
+        # calculate derivative
+        for i in range(0, n):
+            self.db_dt[i, 0] = self.donorControlTotalSystemFlows[i, 0] - self.consumptionOutputs[i, 0] + symbolicData.imports[i, 0]
         # print info
         if (inputParameters.verbose or inputParameters.verboseDonorControlDerivative):
             printer.printInfo("Calculating donor control model derivative for foodWebData '" + foodWebData.food_web_filename + "'")
-            # get dictionary with food web data subs values
-            foodWebDataSubsValues = symbolicData.getFoodWebDataSubsValues(foodWebData)
+            # donor control
             printer.printMatrixEvaluated(
-                "Initial consumption intensity matrix: F (/) b0",
-                self.initialConsumptionIntensity, foodWebDataSubsValues)
+                "Donor control initial consumption intensity",
+                self.donorControlInitialConsumptionIntensity, symbolicData.getFoodWebDataSubsValues(foodWebData))
             printer.printMatrixEvaluated(
-                "Consumption intensity vector: sum(.x)(initialConsumptionIntensity)",
-                self.consumptionIntensity, foodWebDataSubsValues)
+                "Donor control total system flows",
+                self.donorControlTotalSystemFlows, symbolicData.getFoodWebDataSubsValues(foodWebData))
+            # result
             printer.printMatrixEvaluated(
-                "System inflows vector: initialConsumptionIntensity * b",
-                self.systemInflows, foodWebDataSubsValues)
-            printer.printMatrixEvaluated(
-                "System outflows vector: consumptionIntensity (*) b",
-                self.systemOutflows, foodWebDataSubsValues)
-            printer.printMatrixEvaluated(
-                "Total system flows: systemInflows - systemOutflows",
-                self.totalSystemFlows, foodWebDataSubsValues)
-            printer.printMatrixEvaluated(
-                "Units export: q (/) b0",
-                self.unitsExport, foodWebDataSubsValues)
-            printer.printMatrixEvaluated(
-                "Units respiration: r (/) b0",
-                self.unitsRespiration, foodWebDataSubsValues)
-            printer.printMatrixEvaluated(
-                "Outflows: (unitsExport + unitsRespiration) * b",
-                self.outflows, foodWebDataSubsValues)
-            printer.printMatrixEvaluated(
-                "d(b)/d(t): totalSystemFlows - outflows + imports",
-                self.db_dt, foodWebDataSubsValues)
+                "Derivative",
+                self.db_dt, symbolicData.getFoodWebDataSubsValues(foodWebData))
 
     # calculate donor control fixed points
     def calculateFixedPoints(self, inputParameters: InputParameters, printer: Printer, symbolicData: SymbolicData, foodWebData: FoodWebData) -> None:
@@ -119,29 +126,14 @@ class DonorControlModel:
                     "Jacobian: initialConsumptionIntensity - diagonal",
                     self.jacobian, foodWebDataSubsValues)
 
-    # initial consumption intensity matrix: F (/) b0
-    initialConsumptionIntensity: sp.Matrix
+    # consumption outputs
+    consumptionOutputs: sp.Matrix
 
-    # consumption intensity vector: sum(.x)(initialConsumptionIntensity)
-    consumptionIntensity: sp.Matrix
+    # donor control consumption intensity: F (/) bi
+    donorControlInitialConsumptionIntensity: sp.Matrix
 
-    # system inflows vector: initialConsumptionIntensity * b
-    systemInflows: sp.Matrix
-
-    # system outflows vector: consumptionIntensity (*) b
-    systemOutflows: sp.Matrix
-
-    # total system flows: systemInflows - systemOutflows
-    totalSystemFlows: sp.Matrix
-
-    # units exports: q (/) b0
-    unitsExport: sp.Matrix
-
-    # units respiration: r (/) b0
-    unitsRespiration: sp.Matrix
-
-    # outflows: (unitsExport + unitsRespiration) * b
-    outflows: sp.Matrix
+    # donor control total system flows
+    donorControlTotalSystemFlows: sp.Matrix
 
     # derivative of b / derivative of t
     db_dt: sp.Matrix
