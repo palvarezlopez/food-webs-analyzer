@@ -2,9 +2,9 @@
 import sympy as sp
 
 # import libraries
-from common.inputParameters import InputParameters
-from common.printer import Printer
-from ecosystems.data.foodWebData import FoodWebData
+from foodWebsAnalyzer.common.inputParameters import InputParameters
+from foodWebsAnalyzer.common.printer import Printer
+from foodWebsAnalyzer.ecosystems.data.foodWebData import FoodWebData
 
 
 # class balancing (using for check if the given biomass is balanced)

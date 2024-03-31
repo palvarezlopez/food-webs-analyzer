@@ -2,9 +2,9 @@
 import numpy as np
 
 # import libraries
-from ecosystems.analysis.stability import Stability
-from ecosystems.data.foodWebData import FoodWebData
-from common.printer import Printer
+from foodWebsAnalyzer.ecosystems.analysis.stability import Stability
+from foodWebsAnalyzer.ecosystems.data.foodWebData import FoodWebData
+from foodWebsAnalyzer.common.printer import Printer
 
 # class control space jacobian (used for calculate the control space based on jacobian)
 class ControlSpaceJacobian:

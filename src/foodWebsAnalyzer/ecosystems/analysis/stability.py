@@ -2,10 +2,10 @@
 import sympy as sp
 
 # import libraries
-from common.inputParameters import InputParameters
-from common.printer import Printer
-from ecosystems.data.foodWebData import FoodWebData
-from ecosystems.data.symbolicData import SymbolicData
+from foodWebsAnalyzer.common.inputParameters import InputParameters
+from foodWebsAnalyzer.common.printer import Printer
+from foodWebsAnalyzer.ecosystems.data.foodWebData import FoodWebData
+from foodWebsAnalyzer.ecosystems.data.symbolicData import SymbolicData
 
 # class stability (used for study the stability with combinations of proportions)
 class Stability:

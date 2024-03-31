@@ -3,16 +3,16 @@ import sympy as sp
 from sympy.strategies.rl import subs
 
 # import libraries
-from common.inputParameters import InputParameters
-from common.printer import Printer
+from foodWebsAnalyzer.common.inputParameters import InputParameters
+from foodWebsAnalyzer.common.printer import Printer
 from common import matrixOperations as mo
-from ecosystems.analysis.donorControlModel import DonorControlModel
-from ecosystems.data.foodWebData import FoodWebData
-from ecosystems.data.symbolicData import SymbolicData
-from ecosystems.proportions import Proportions
-from ecosystems.analysis.steadyStates import SteadyStates
-from ecosystems.analysis.stability import Stability
-from ecosystems.controlSpaces.controlSpaceJacobian import ControlSpaceJacobian
+from foodWebsAnalyzer.ecosystems.analysis.donorControlModel import DonorControlModel
+from foodWebsAnalyzer.ecosystems.data.foodWebData import FoodWebData
+from foodWebsAnalyzer.ecosystems.data.symbolicData import SymbolicData
+from foodWebsAnalyzer.ecosystems.proportions import Proportions
+from foodWebsAnalyzer.ecosystems.analysis.steadyStates import SteadyStates
+from foodWebsAnalyzer.ecosystems.analysis.stability import Stability
+from foodWebsAnalyzer.ecosystems.controlSpaces.controlSpaceJacobian import ControlSpaceJacobian
 
 # class general model (used for calculate all donor control parameters)
 class GeneralModel:

@@ -2,11 +2,11 @@
 import sympy as sp
 
 # import libraries
-from common.inputParameters import InputParameters
-from common.printer import Printer
-from ecosystems.data.foodWebData import FoodWebData
-from ecosystems.analysis.steadyStates import SteadyStates
-from ecosystems.analysis.generalModel import GeneralModel
+from foodWebsAnalyzer.common.inputParameters import InputParameters
+from foodWebsAnalyzer.common.printer import Printer
+from foodWebsAnalyzer.ecosystems.data.foodWebData import FoodWebData
+from foodWebsAnalyzer.ecosystems.analysis.steadyStates import SteadyStates
+from foodWebsAnalyzer.ecosystems.analysis.generalModel import GeneralModel
 
 
 # class ODEChecker (used for check ODE results)

@@ -12,8 +12,8 @@ import scipy as sc # type: ignore
 
 
 # import libraries
-from common.inputParameters import InputParameters
-import utils.transform as tr
+from foodWebsAnalyzer.common.inputParameters import InputParameters
+import foodWebsAnalyzer.utils.transform as tr
 
 
 # class printer (used for print outputs in console and files)

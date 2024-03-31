@@ -5,8 +5,8 @@ import numpy as np
 import random as rd
 
 # import libraries
-from common.inputParameters import InputParameters
-from common.printer import Printer
+from foodWebsAnalyzer.common.inputParameters import InputParameters
+from foodWebsAnalyzer.common.printer import Printer
 
 # class food web data (used for read input files)
 class FoodWebData:

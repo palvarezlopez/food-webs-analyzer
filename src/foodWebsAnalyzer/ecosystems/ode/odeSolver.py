@@ -3,15 +3,15 @@ import sympy as sp
 import scipy as sc # type: ignore
 
 # import libraries
-from common.inputParameters import InputParameters
-from common.printer import Printer
-from ecosystems.proportions import Proportions
-from ecosystems.data.foodWebData import FoodWebData
-from ecosystems.data.symbolicData import SymbolicData
-from ecosystems.analysis.generalModel import GeneralModel
-from ecosystems.ode.odeChecker import ODEChecker
-import utils.transform as tr
-import utils.ode as ode
+from foodWebsAnalyzer.common.inputParameters import InputParameters
+from foodWebsAnalyzer.common.printer import Printer
+from foodWebsAnalyzer.ecosystems.proportions import Proportions
+from foodWebsAnalyzer.ecosystems.data.foodWebData import FoodWebData
+from foodWebsAnalyzer.ecosystems.data.symbolicData import SymbolicData
+from foodWebsAnalyzer.ecosystems.analysis.generalModel import GeneralModel
+from foodWebsAnalyzer.ecosystems.ode.odeChecker import ODEChecker
+import foodWebsAnalyzer.utils.transform as tr
+import foodWebsAnalyzer.utils.ode as ode
 
 
 # class ODESolver (used for solve ODE)
