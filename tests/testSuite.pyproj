@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{4a7e83b3-dcaa-466f-b3db-1b582c6a7b9c}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>ecosystems\analysis\numerical\basic_2x2\default\test.py</StartupFile>
+    <StartupFile>ecosystems\analysis\numerical\basic_2x2\donorControl\jacobian\comparing\test.py</StartupFile>
     <SearchPath>..\src</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>

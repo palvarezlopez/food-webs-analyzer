@@ -1,3 +1,5 @@
+Reading all ecosystem data from '.'
+Reading file foodWebData.m...
 Parsed data from 'foodWebData'
 -CRC 'crc_test3x3'
 -Matrix size (n) '3'
@@ -49,3 +51,4 @@ Jacobian (Sympy)
 [7/10   8/11  -4 ]
 Writting file 'steadyStatesDonorControl.m'
 Writting output file 'plainOutput.txt'
+Finished.

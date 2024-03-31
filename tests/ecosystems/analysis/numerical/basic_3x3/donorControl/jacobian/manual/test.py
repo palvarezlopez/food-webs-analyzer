@@ -5,6 +5,7 @@ foodWebsAnalyzer.FoodWebsAnalyzer([
     "--dataFolder", ".",
     "--verbose-inputFile",
     "--numerical",
+    "--useManualJacobian",
     "--calculateDonorControlModel",
     "--verbose-donorControlJacobian",
     "--outputPlainFile", "plainOutput.txt",

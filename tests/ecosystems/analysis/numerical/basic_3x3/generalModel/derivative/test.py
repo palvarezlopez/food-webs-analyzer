@@ -1,8 +1,7 @@
 import foodWebsAnalyzer
 
 # declare input-output parameters
-foodWebsAnalyzer.FoodWebsAnalyzer([
-    "--dataFolder", ".",
+foodWebsAnalyzer.FoodWebsAnalyzer(["--dataFolder", ".",
     "--verbose-inputFile",
     "--calculateGeneralModel",
     "--numerical",

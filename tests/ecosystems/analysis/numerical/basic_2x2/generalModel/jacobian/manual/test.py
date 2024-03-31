@@ -4,8 +4,9 @@ import foodWebsAnalyzer
 foodWebsAnalyzer.FoodWebsAnalyzer([
     "--dataFolder", ".",
     "--verbose-inputFile",
-    "--calculateGeneralModel",
     "--numerical",
+    "--useManualJacobian",
+    "--calculateGeneralModel",
     "--verbose-generalModelJacobian",
     "--outputPlainFile", "plainOutput.txt",
     "--outputLatexFile", "latexOutput"

@@ -1,3 +1,5 @@
+Reading all ecosystem data from '.'
+Reading file foodWebData.m...
 Parsed data from 'foodWebData'
 -CRC 'crc_test3x3'
 -Matrix size (n) '3'
@@ -218,3 +220,4 @@ Evaluated
 [- ------ + s_d*|----- + ----- - -----| + s_l*|------- + -------| + s_r*|- ----- - ----- + -----| + 15]
 [    4          \  10      11      4  /       \   30        66  /       \    10      11      4  /     ]
 Writting output file 'plainOutput.txt'
+Finished.

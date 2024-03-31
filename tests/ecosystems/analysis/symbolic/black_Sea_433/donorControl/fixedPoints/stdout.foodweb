@@ -1,3 +1,5 @@
+Reading all ecosystem data from '.'
+Reading file foodWebData.m...
 Parsed data from 'foodWebData'
 -CRC 'crc_43588c3e'
 -Matrix size (n) '7'
@@ -103,3 +105,4 @@ Fixed points(b = b0):
 [-0.000294641549317021]
 Writting file 'steadyStatesDonorControl.m'
 Writting output file 'plainOutput.txt'
+Finished.

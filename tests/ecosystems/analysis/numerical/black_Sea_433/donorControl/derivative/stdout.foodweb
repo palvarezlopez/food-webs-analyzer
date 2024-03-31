@@ -1,3 +1,5 @@
+Reading all ecosystem data from '.'
+Reading file foodWebData.m...
 Parsed data from 'foodWebData'
 -CRC 'crc_43588c3e'
 -Matrix size (n) '7'
@@ -217,3 +219,4 @@ d(b)/d(t): totalSystemFlows - outflows + imports
 [1.9100004184464*b_0 + 3.49805742296919*b_1 + 2.61000032574425*b_2 + 17.84*b_3 + 58.1231714285714*b_4 + 52.0270724506019*b_5 - 12.6330305882077*b_6]
 Writting file 'steadyStatesDonorControl.m'
 Writting output file 'plainOutput.txt'
+Finished.

@@ -1,4 +1,3 @@
-
 import foodWebsAnalyzer
 
 # declare input-output parameters
