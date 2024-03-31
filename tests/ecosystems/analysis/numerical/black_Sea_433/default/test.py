@@ -1,6 +1,6 @@
 import foodWebsAnalyzer
 
-# declare input-output parameters
+# declare food web analyzer instance
 foodWebsAnalyzer.FoodWebsAnalyzer([
     "--dataFolder", ".",
     "--verbose",
