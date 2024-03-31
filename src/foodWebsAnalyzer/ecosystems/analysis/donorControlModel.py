@@ -4,7 +4,7 @@ import sympy as sp
 # import libraries
 from foodWebsAnalyzer.common.inputParameters import InputParameters
 from foodWebsAnalyzer.common.printer import Printer
-from common import matrixOperations as mo
+from foodWebsAnalyzer.common import matrixOperations as mo
 from foodWebsAnalyzer.ecosystems.data.foodWebData import FoodWebData
 from foodWebsAnalyzer.ecosystems.data.symbolicData import SymbolicData
 from foodWebsAnalyzer.ecosystems.analysis.steadyStates import SteadyStates
