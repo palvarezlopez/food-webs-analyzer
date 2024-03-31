@@ -1,10 +1,10 @@
 [project]
-name = "foodWebsAnalyzer"
+name = "food-webs-analyzer"
 version = "0.1"
 authors = [
   { name="Pablo Alvarez Lopez", email="pablo.alvarezlopez@dlr.de" },
 ]
-description = "A small example package"
+description = "Python package for the analysis of throphic networks"
 readme = "README.md"
 requires-python = ">=3.10"
 classifiers = [
@@ -14,5 +14,5 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/palvarezlopez/foodWebsAnalyzer"
-Issues = "https://github.com/palvarezlopez/foodWebsAnalyzer/issues"
+Homepage = "https://github.com/palvarezlopez/food-webs-analyzer"
+Issues = "https://github.com/palvarezlopez/food-webs-analyzer/issues"
