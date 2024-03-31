@@ -5,11 +5,11 @@ import scipy as sc # type: ignore
 # import libraries
 from common.inputParameters import InputParameters
 from common.printer import Printer
-from ecosystem.proportions import Proportions
-from ecosystem.data.foodWebData import FoodWebData
-from ecosystem.data.symbolicData import SymbolicData
-from ecosystem.analysis.generalModel import GeneralModel
-from ecosystem.ode.odeChecker import ODEChecker
+from ecosystems.proportions import Proportions
+from ecosystems.data.foodWebData import FoodWebData
+from ecosystems.data.symbolicData import SymbolicData
+from ecosystems.analysis.generalModel import GeneralModel
+from ecosystems.ode.odeChecker import ODEChecker
 import utils.transform as tr
 import utils.ode as ode
 

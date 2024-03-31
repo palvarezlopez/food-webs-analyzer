@@ -1,11 +1,11 @@
 """
-foodwebviz
+foodWebsAnalyzer
 ========
-foodwebviz is a Python package for the analysis and visualization of throphic networks.
+foodWebsAnalyzer is a Python package for the analysis of throphic networks.
 """
 
-# Import foodwebviz objects
-from foodWebsAnalyzer.ecosystems.ode.odeChecker import *
-from foodWebsAnalyzer.ecosystems.ode.odeSolver import *
+# Import foodWebsAnalyzer objects
+from ecosystems.ode.odeChecker import *
+from ecosystems.ode.odeSolver import *
 
 __version__ = "0.1"

@@ -4,7 +4,7 @@ import sympy as sp
 # import libraries
 from common.inputParameters import InputParameters
 from common.printer import Printer
-from ecosystem.data.foodWebData import FoodWebData
+from ecosystems.data.foodWebData import FoodWebData
 
 
 # class balancing (using for check if the given biomass is balanced)

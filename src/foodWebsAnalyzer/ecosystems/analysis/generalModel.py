@@ -6,13 +6,13 @@ from sympy.strategies.rl import subs
 from common.inputParameters import InputParameters
 from common.printer import Printer
 from common import matrixOperations as mo
-from ecosystem.analysis.donorControlModel import DonorControlModel
-from ecosystem.data.foodWebData import FoodWebData
-from ecosystem.data.symbolicData import SymbolicData
-from ecosystem.proportions import Proportions
-from ecosystem.analysis.steadyStates import SteadyStates
-from ecosystem.analysis.stability import Stability
-from ecosystem.controlSpaces.controlSpaceJacobian import ControlSpaceJacobian
+from ecosystems.analysis.donorControlModel import DonorControlModel
+from ecosystems.data.foodWebData import FoodWebData
+from ecosystems.data.symbolicData import SymbolicData
+from ecosystems.proportions import Proportions
+from ecosystems.analysis.steadyStates import SteadyStates
+from ecosystems.analysis.stability import Stability
+from ecosystems.controlSpaces.controlSpaceJacobian import ControlSpaceJacobian
 
 # class general model (used for calculate all donor control parameters)
 class GeneralModel:

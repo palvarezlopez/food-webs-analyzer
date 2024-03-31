@@ -2,8 +2,8 @@
 import numpy as np
 
 # import libraries
-from ecosystem.analysis.stability import Stability
-from ecosystem.data.foodWebData import FoodWebData
+from ecosystems.analysis.stability import Stability
+from ecosystems.data.foodWebData import FoodWebData
 from common.printer import Printer
 
 # class control space jacobian (used for calculate the control space based on jacobian)

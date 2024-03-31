@@ -2,7 +2,7 @@ import sympy as sp
 from common.inputParameters import InputParameters
 from common import matrixOperations as mo
 from common.printer import Printer
-from ecosystem.ecosystem import Ecosystem
+from ecosystems.ecosystem import Ecosystem
 
 # declare input-output parameters
 inputParameters: InputParameters = InputParameters(["--dataFolder", ".", "--calculateDonorControlModel"])

@@ -2,8 +2,8 @@
 import sympy as sp
 
 # import libraries
-from ecosystem.data.foodWebData import FoodWebData
-from ecosystem.data.symbolicData import SymbolicData
+from ecosystems.data.foodWebData import FoodWebData
+from ecosystems.data.symbolicData import SymbolicData
 
 """
 check if the given matrix are equals

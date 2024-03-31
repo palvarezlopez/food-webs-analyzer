@@ -5,9 +5,9 @@ import sympy as sp
 from common.inputParameters import InputParameters
 from common.printer import Printer
 from common import matrixOperations as mo
-from ecosystem.data.foodWebData import FoodWebData
-from ecosystem.data.symbolicData import SymbolicData
-from ecosystem.analysis.steadyStates import SteadyStates
+from ecosystems.data.foodWebData import FoodWebData
+from ecosystems.data.symbolicData import SymbolicData
+from ecosystems.analysis.steadyStates import SteadyStates
 
 # class donor control model (used for calculate all donor control parameters)
 class DonorControlModel:

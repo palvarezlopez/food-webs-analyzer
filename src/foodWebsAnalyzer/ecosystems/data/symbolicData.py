@@ -2,7 +2,7 @@
 import sympy as sp
 
 # import libraries
-from ecosystem.data.foodWebData import FoodWebData
+from ecosystems.data.foodWebData import FoodWebData
 from common.inputParameters import InputParameters
 
 # symbolic elements used in foodWebData

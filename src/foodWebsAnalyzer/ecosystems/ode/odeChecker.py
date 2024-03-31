@@ -4,9 +4,9 @@ import sympy as sp
 # import libraries
 from common.inputParameters import InputParameters
 from common.printer import Printer
-from ecosystem.data.foodWebData import FoodWebData
-from ecosystem.analysis.steadyStates import SteadyStates
-from ecosystem.analysis.generalModel import GeneralModel
+from ecosystems.data.foodWebData import FoodWebData
+from ecosystems.analysis.steadyStates import SteadyStates
+from ecosystems.analysis.generalModel import GeneralModel
 
 
 # class ODEChecker (used for check ODE results)

@@ -1,6 +1,6 @@
 from common.inputParameters import InputParameters
 from common.printer import Printer
-from ecosystem.ecosystem import Ecosystem
+from ecosystems.ecosystem import Ecosystem
 
 # declare input-output parameters
 inputParameters: InputParameters = InputParameters(

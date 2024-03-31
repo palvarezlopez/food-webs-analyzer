@@ -5,9 +5,9 @@ import sys
 # import libraries
 from common.inputParameters import InputParameters
 from common.printer import Printer
-from ecosystem.ecosystem import Ecosystem
-from ecosystem.analysis.generalModel import GeneralModel
-from ecosystem.analysis.stability import Stability
+from ecosystems.ecosystem import Ecosystem
+from ecosystems.analysis.generalModel import GeneralModel
+from ecosystems.analysis.stability import Stability
 
 # class food webs analyzer
 class FoodWebsAnalyzer:

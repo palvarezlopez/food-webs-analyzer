@@ -1,13 +1,13 @@
 # import libraries
 from common.inputParameters import InputParameters
 from common.printer import Printer
-from ecosystem.ode.odeSolver import ODESolver
-from ecosystem.balancing import Balancing
-from ecosystem.proportions import Proportions
-from ecosystem.analysis.donorControlModel import DonorControlModel
-from ecosystem.analysis.generalModel import GeneralModel
-from ecosystem.data.foodWebData import FoodWebData
-from ecosystem.data.symbolicData import SymbolicData
+from ecosystems.ode.odeSolver import ODESolver
+from ecosystems.balancing import Balancing
+from ecosystems.proportions import Proportions
+from ecosystems.analysis.donorControlModel import DonorControlModel
+from ecosystems.analysis.generalModel import GeneralModel
+from ecosystems.data.foodWebData import FoodWebData
+from ecosystems.data.symbolicData import SymbolicData
 
 
 # class food web data (used for read input files)

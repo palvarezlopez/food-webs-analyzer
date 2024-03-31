@@ -5,8 +5,8 @@ import sympy as sp
 from common.inputParameters import InputParameters
 from common.printer import Printer
 from common import matrixOperations as mo
-from ecosystem.data.foodWebData import FoodWebData
-from ecosystem.data.symbolicData import SymbolicData
+from ecosystems.data.foodWebData import FoodWebData
+from ecosystems.data.symbolicData import SymbolicData
 
 
 # class Steady states (used for calculate steady states for donor control or general model)
