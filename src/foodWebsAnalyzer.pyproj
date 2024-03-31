@@ -5,7 +5,7 @@
     <ProjectGuid>4ad1b97f-d7b6-47c1-9109-43932bd16015</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>foodwebsAnalyzer.py</StartupFile>
+    <StartupFile>foodWebsAnalyzer\__init__.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -30,37 +30,38 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="common\printer.py" />
-    <Compile Include="common\inputParameters.py" />
-    <Compile Include="common\matrixOperations.py" />
-    <Compile Include="ecosystems\analysis\generalModel.py" />
-    <Compile Include="ecosystems\analysis\donorControlModel.py" />
-    <Compile Include="ecosystems\analysis\stability.py" />
-    <Compile Include="ecosystems\data\symbolicData.py" />
-    <Compile Include="ecosystems\ode\odeChecker.py" />
-    <Compile Include="ecosystems\analysis\steadyStates.py" />
-    <Compile Include="ecosystems\ode\odeSolver.py" />
-    <Compile Include="ecosystems\balancing.py" />
-    <Compile Include="ecosystems\proportions.py" />
-    <Compile Include="ecosystems\data\foodWebData.py" />
-    <Compile Include="ecosystems\controlSpaces\controlSpaceJacobian.py" />
-    <Compile Include="foodwebsAnalyzer.py" />
-    <Compile Include="ecosystems\ecosystem.py" />
-    <Compile Include="utils\transform.py" />
-    <Compile Include="utils\testFunctions.py" />
-    <Compile Include="utils\ode.py" />
+    <Compile Include="foodWebsAnalyzer\common\printer.py" />
+    <Compile Include="foodWebsAnalyzer\common\inputParameters.py" />
+    <Compile Include="foodWebsAnalyzer\common\matrixOperations.py" />
+    <Compile Include="foodWebsAnalyzer\ecosystems\analysis\generalModel.py" />
+    <Compile Include="foodWebsAnalyzer\ecosystems\analysis\donorControlModel.py" />
+    <Compile Include="foodWebsAnalyzer\ecosystems\analysis\stability.py" />
+    <Compile Include="foodWebsAnalyzer\ecosystems\data\symbolicData.py" />
+    <Compile Include="foodWebsAnalyzer\ecosystems\ode\odeChecker.py" />
+    <Compile Include="foodWebsAnalyzer\ecosystems\analysis\steadyStates.py" />
+    <Compile Include="foodWebsAnalyzer\ecosystems\ode\odeSolver.py" />
+    <Compile Include="foodWebsAnalyzer\ecosystems\balancing.py" />
+    <Compile Include="foodWebsAnalyzer\ecosystems\proportions.py" />
+    <Compile Include="foodWebsAnalyzer\ecosystems\data\foodWebData.py" />
+    <Compile Include="foodWebsAnalyzer\ecosystems\controlSpaces\controlSpaceJacobian.py" />
+    <Compile Include="foodWebsAnalyzer\ecosystems\ecosystem.py" />
+    <Compile Include="foodWebsAnalyzer\utils\transform.py" />
+    <Compile Include="foodWebsAnalyzer\utils\testFunctions.py" />
+    <Compile Include="foodWebsAnalyzer\utils\ode.py" />
+    <Compile Include="foodWebsAnalyzer\__init__.py" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="common\" />
-    <Folder Include="ecosystems\" />
-    <Folder Include="ecosystems\data\" />
-    <Folder Include="ecosystems\analysis\" />
-    <Folder Include="ecosystems\controlSpaces\" />
-    <Folder Include="ecosystems\ode\" />
-    <Folder Include="utils\" />
+    <Folder Include="foodWebsAnalyzer\" />
+    <Folder Include="foodWebsAnalyzer\common\" />
+    <Folder Include="foodWebsAnalyzer\ecosystems\" />
+    <Folder Include="foodWebsAnalyzer\ecosystems\data\" />
+    <Folder Include="foodWebsAnalyzer\ecosystems\analysis\" />
+    <Folder Include="foodWebsAnalyzer\ecosystems\controlSpaces\" />
+    <Folder Include="foodWebsAnalyzer\ecosystems\ode\" />
+    <Folder Include="foodWebsAnalyzer\utils\" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="..\.venv\">
+    <Interpreter Include=".venv\">
       <Id>.venv</Id>
       <Version>3.10</Version>
       <Description>.venv (Python 3.10 (64-bit))</Description>

@@ -5,19 +5,20 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{4a7e83b3-dcaa-466f-b3db-1b582c6a7b9c}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>foodWebsAnalyzer\checkLocalStability\test.py</StartupFile>
+    <StartupFile>ecosystems\analysis\numerical\basic_2x2\default\test.py</StartupFile>
     <SearchPath>..\src</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
-    <InterpreterId>MSBuild|.venv|D:\foodwebsAnalyzer\foodWebsAnalyzer\foodWebsAnalyzer.pyproj</InterpreterId>
+    <InterpreterId>MSBuild|.venv|D:\food-webs-analyzer\src\foodWebsAnalyzer.pyproj</InterpreterId>
     <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
     <CommandLineArguments>C:\Repositories\foodweb-dynamics-python\python\tests\functions\test\test.py</CommandLineArguments>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
     <Name>testSuite</Name>
     <Environment>
     </Environment>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
@@ -1564,7 +1565,7 @@
     <Compile Include="modules\ternary\shannonEntropy\test.py" />
   </ItemGroup>
   <ItemGroup>
-    <InterpreterReference Include="MSBuild|.venv|D:\food-webs-analyzer\src\food-webs-analyzer\food-webs-analyzer.pyproj" />
+    <InterpreterReference Include="MSBuild|.venv|D:\food-webs-analyzer\src\foodWebsAnalyzer.pyproj" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
 </Project>
