@@ -87,21 +87,7 @@ Parsed data from 'foodWebData'
 [                                                                          ]
 [0.1111046  4.995226   0.3692124   28.66888  2034.311   458.1504      0    ]
 Calculating donor control model jacobian matrix for foodWebData 'foodWebData'
-Diagonal: consumptionIntensity + outflows
-[8.70000041894494         0                 0           0           0                 0                0        ]
-[                                                                                                               ]
-[       0          8.99999954481793         0           0           0                 0                0        ]
-[                                                                                                               ]
-[       0                 0          11.9999998303415   0           0                 0                0        ]
-[                                                                                                               ]
-[       0                 0                 0          39.2         0                 0                0        ]
-[                                                                                                               ]
-[       0                 0                 0           0    136.999991588571         0                0        ]
-[                                                                                                               ]
-[       0                 0                 0           0           0          389.99998183057         0        ]
-[                                                                                                               ]
-[       0                 0                 0           0           0                 0         12.6330305882077]
-Jacobian: initialConsumptionIntensity - diagonal
+Jacobian
 [-8.70000041894494  0.177198319327731  0.357752011810039    0            0                  0                  0        ]
 [                                                                                                                       ]
 [        0          -8.99999954481793          0            0         0.3672                0                  0        ]
@@ -115,5 +101,4 @@ Jacobian: initialConsumptionIntensity - diagonal
 [        0                  0                  0            0            0          -389.99998183057           0        ]
 [                                                                                                                       ]
 [ 1.9100004184464   3.49805742296919   2.61000032574425   17.84  58.1231714285714   52.0270724506019   -12.6330305882077]
-Writting file 'steadyStatesDonorControl.m'
 Writting output file 'plainOutput.txt'

@@ -27,10 +27,7 @@
 \begin{equation*}\mathtt{\text{-Flow matrix (F):}}\end{equation*}%
 \begin{equation*}\left[\begin{matrix}1 & 2\\3 & 4\end{matrix}\right]\end{equation*}%
 \begin{equation*}\mathtt{\text{Calculating donor control model jacobian matrix for foodWebData 'foodWebData'}}\end{equation*}%
-\begin{equation*}\mathtt{\text{Diagonal: consumptionIntensity + outflows}}\end{equation*}%
-\begin{equation*}\left[\begin{array}{cc}\frac{24}{5} & 0\\0 & \frac{14}{3}\end{array}\right]\end{equation*}%
-\begin{equation*}\mathtt{\text{Jacobian: initialConsumptionIntensity - diagonal}}\end{equation*}%
+\begin{equation*}\mathtt{\text{Jacobian}}\end{equation*}%
 \begin{equation*}\left[\begin{array}{cc}- \frac{23}{5} & \frac{1}{3}\\\frac{3}{5} & -4\end{array}\right]\end{equation*}%
-\begin{equation*}\mathtt{\text{Writting file 'steadyStatesDonorControl.m'}}\end{equation*}%
 \begin{equation*}\mathtt{\text{Writting output file 'plainOutput.txt'}}\end{equation*}%
 \end{document}

@@ -38,14 +38,34 @@ Parsed data from 'foodWebData'
 [4  5  6]
 [       ]
 [7  8  9]
-Writting file 'steadyStatesDonorControl.m'
-Calculating general model derivative for foodWebData 'foodWebData'
-Donor control initial consumption intensity
+Calculating output consumption for foodWebData 'foodWebData'
+Donor Control consumption
 [1/10  2/11  1/4]
 [               ]
 [2/5   5/11  1/2]
 [               ]
 [7/10  8/11  3/4]
+Recipient consumption
+[1/10  1/5   3/10]
+[                ]
+[4/11  5/11  6/11]
+[                ]
+[7/12  2/3   3/4 ]
+Lotka-Volterra consumption
+[1/100  1/55   1/40]
+[                  ]
+[2/55   5/121  1/22]
+[                  ]
+[7/120  2/33   1/16]
+Output consumption
+[7/2   0  0]
+[          ]
+[ 37       ]
+[ --   0  0]
+[ 11       ]
+[          ]
+[13/4  0  0]
+Calculating general model derivative for foodWebData 'foodWebData'
 Donor control total system flows
 [  11*b_0   2*b_1   b_2]
 [- ------ + ----- + ---]
@@ -58,12 +78,6 @@ Donor control total system flows
 [7*b_0   8*b_1   3*b_2 ]
 [----- + ----- - ----- ]
 [  10      11      4   ]
-Recipient initial consumption intensity
-[1/10  1/5   3/10]
-[                ]
-[4/11  5/11  6/11]
-[                ]
-[7/12  2/3   3/4 ]
 Recipient total system flows
 [  b_0   4*b_1   7*b_2  ]
 [  --- - ----- - -----  ]
@@ -76,12 +90,6 @@ Recipient total system flows
 [  3*b_0   6*b_1   5*b_2]
 [- ----- - ----- + -----]
 [    10      11      4  ]
-Mixed initial consumption intensity
-[1/100  1/55   1/40]
-[                  ]
-[2/55   5/121  1/22]
-[                  ]
-[7/120  2/33   1/16]
 Mixed total system flows
 [  b_0*b_1   b_0*b_2]
 [- ------- - -------]
@@ -107,15 +115,15 @@ Total system flows
 [s_d*|----- + ----- - -----| + s_l*|------- + -------| + s_r*|- ----- - ----- + -----|]
 [    \  10      11      4  /       \   30        66  /       \    10      11      4  /]
 Derivative
-[   7*b_0       /  11*b_0   2*b_1   b_2\       /  b_0*b_1   b_0*b_2\       /b_0   4*b_1   7*b_2\      ]
-[ - ----- + s_d*|- ------ + ----- + ---| + s_l*|- ------- - -------| + s_r*|--- - ----- - -----| + 13 ]
-[     2         \    10       11     4 /       \     55        30  /       \ 2      11      12 /      ]
-[                                                                                                     ]
-[   37*b_1       /2*b_0   10*b_1   b_2\       /b_0*b_1   b_1*b_2\       /  b_0   10*b_1   2*b_2\      ]
-[ - ------ + s_d*|----- - ------ + ---| + s_l*|------- - -------| + s_r*|- --- + ------ - -----| + 14 ]
-[     11         \  5       11      2 /       \   55        66  /       \   5      11       3  /      ]
-[                                                                                                     ]
-[  13*b_2       /7*b_0   8*b_1   3*b_2\       /b_0*b_2   b_1*b_2\       /  3*b_0   6*b_1   5*b_2\     ]
-[- ------ + s_d*|----- + ----- - -----| + s_l*|------- + -------| + s_r*|- ----- - ----- + -----| + 15]
-[    4          \  10      11      4  /       \   30        66  /       \    10      11      4  /     ]
+[    /  11*b_0   2*b_1   b_2\       /  b_0*b_1   b_0*b_2\       /b_0   4*b_1   7*b_2\   19 ]
+[s_d*|- ------ + ----- + ---| + s_l*|- ------- - -------| + s_r*|--- - ----- - -----| + -- ]
+[    \    10       11     4 /       \     55        30  /       \ 2      11      12 /   2  ]
+[                                                                                          ]
+[    /2*b_0   10*b_1   b_2\       /b_0*b_1   b_1*b_2\       /  b_0   10*b_1   2*b_2\   117 ]
+[s_d*|----- - ------ + ---| + s_l*|------- - -------| + s_r*|- --- + ------ - -----| + --- ]
+[    \  5       11      2 /       \   55        66  /       \   5      11       3  /    11 ]
+[                                                                                          ]
+[    /7*b_0   8*b_1   3*b_2\       /b_0*b_2   b_1*b_2\       /  3*b_0   6*b_1   5*b_2\   47]
+[s_d*|----- + ----- - -----| + s_l*|------- + -------| + s_r*|- ----- - ----- + -----| + --]
+[    \  10      11      4  /       \   30        66  /       \    10      11      4  /   4 ]
 Writting output file 'plainOutput.txt'

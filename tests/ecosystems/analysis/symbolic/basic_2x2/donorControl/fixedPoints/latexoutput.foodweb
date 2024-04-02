@@ -28,7 +28,6 @@
 \begin{equation*}\left[\begin{matrix}1 & 2\\3 & 4\end{matrix}\right]\end{equation*}%
 \begin{equation*}\mathtt{\text{Calculating donor control model fixed points for 'foodWebData'}}\end{equation*}%
 \begin{equation*}\mathtt{\text{Fixed points(b = b0):}}\end{equation*}%
-\begin{equation*}\left[\begin{matrix}-14\\-13\end{matrix}\right]\end{equation*}%
-\begin{equation*}\mathtt{\text{Writting file 'steadyStatesDonorControl.m'}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}2\\\frac{16}{3}\end{matrix}\right]\end{equation*}%
 \begin{equation*}\mathtt{\text{Writting output file 'plainOutput.txt'}}\end{equation*}%
 \end{document}

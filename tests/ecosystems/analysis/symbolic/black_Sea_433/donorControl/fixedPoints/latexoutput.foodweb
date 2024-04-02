@@ -28,7 +28,6 @@
 \begin{equation*}\left[\begin{matrix}0 & 0.2530392 & 0.05060784 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 12.852 & 0 & 0\\0 & 0.5941348 & 0.1697528 & 0 & 0.3395056 & 0 & 0.5941348\\0 & 0 & 0 & 0 & 31.4972 & 6.29944 & 25.19776\\0 & 0 & 0 & 0 & 0 & 2397.5 & 2397.5\\0 & 0 & 0 & 0 & 0 & 0 & 0\\0.1111046 & 4.995226 & 0.3692124 & 28.66888 & 2034.311 & 458.1504 & 0\end{matrix}\right]\end{equation*}%
 \begin{equation*}\mathtt{\text{Calculating donor control model fixed points for 'foodWebData'}}\end{equation*}%
 \begin{equation*}\mathtt{\text{Fixed points(b = b0):}}\end{equation*}%
-\begin{equation*}\left[\begin{matrix}-4.45479999208742 \cdot 10^{-8}\\6.49999996937822 \cdot 10^{-7}\\-3.99999999789458 \cdot 10^{-8}\\-1.06581410364015 \cdot 10^{-14}\\0.000294400000711903\\0.000160000000050786\\-0.000294641549317021\end{matrix}\right]\end{equation*}%
-\begin{equation*}\mathtt{\text{Writting file 'steadyStatesDonorControl.m'}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}-6.39502618704654\\2.10091698179272\\-6.72429257802951\\12.96552\\2638.4002944\\507.39016\\102.797357085792\end{matrix}\right]\end{equation*}%
 \begin{equation*}\mathtt{\text{Writting output file 'plainOutput.txt'}}\end{equation*}%
 \end{document}

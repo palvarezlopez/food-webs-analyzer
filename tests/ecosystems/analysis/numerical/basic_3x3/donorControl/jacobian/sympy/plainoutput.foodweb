@@ -40,12 +40,13 @@ Parsed data from 'foodWebData'
 [7  8  9]
 Calculating donor control model jacobian matrix for foodWebData 'foodWebData'
 Jacobian (Sympy)
-[-23/5  2/11  1/4]
+[-11             ]
+[----  2/11  1/4 ]
+[ 10             ]
 [                ]
-[       -47      ]
-[ 2/5   ----  1/2]
-[        11      ]
+[      -10       ]
+[2/5   ----  1/2 ]
+[       11       ]
 [                ]
-[7/10   8/11  -4 ]
-Writting file 'steadyStatesDonorControl.m'
+[7/10  8/11  -3/4]
 Writting output file 'plainOutput.txt'

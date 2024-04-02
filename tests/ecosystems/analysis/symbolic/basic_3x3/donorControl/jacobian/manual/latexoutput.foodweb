@@ -27,14 +27,9 @@
 \begin{equation*}\mathtt{\text{-Flow matrix (F):}}\end{equation*}%
 \begin{equation*}\left[\begin{matrix}1 & 2 & 3\\4 & 5 & 6\\7 & 8 & 9\end{matrix}\right]\end{equation*}%
 \begin{equation*}\mathtt{\text{Calculating donor control model jacobian matrix for foodWebData 'foodWebData'}}\end{equation*}%
-\begin{equation*}\mathtt{\text{Diagonal: consumptionIntensity + outflows}}\end{equation*}%
-\begin{equation*}\left[\begin{array}{ccc}\frac{q_{0}}{b^{*}_{0}} + \frac{r_{0}}{b^{*}_{0}} + \frac{F_{0, 0}}{b^{*}_{0}} + \frac{F_{1, 0}}{b^{*}_{0}} + \frac{F_{2, 0}}{b^{*}_{0}} & 0 & 0\\0 & \frac{q_{1}}{b^{*}_{1}} + \frac{r_{1}}{b^{*}_{1}} + \frac{F_{0, 1}}{b^{*}_{1}} + \frac{F_{1, 1}}{b^{*}_{1}} + \frac{F_{2, 1}}{b^{*}_{1}} & 0\\0 & 0 & \frac{q_{2}}{b^{*}_{2}} + \frac{r_{2}}{b^{*}_{2}} + \frac{F_{0, 2}}{b^{*}_{2}} + \frac{F_{1, 2}}{b^{*}_{2}} + \frac{F_{2, 2}}{b^{*}_{2}}\end{array}\right]\end{equation*}%
-\begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
-\begin{equation*}\left[\begin{matrix}\frac{47}{10} & 0 & 0\\0 & \frac{52}{11} & 0\\0 & 0 & \frac{19}{4}\end{matrix}\right]\end{equation*}%
-\begin{equation*}\mathtt{\text{Jacobian: initialConsumptionIntensity - diagonal}}\end{equation*}%
-\begin{equation*}\left[\begin{array}{ccc}- \frac{q_{0}}{b^{*}_{0}} - \frac{r_{0}}{b^{*}_{0}} - \frac{F_{1, 0}}{b^{*}_{0}} - \frac{F_{2, 0}}{b^{*}_{0}} & \frac{F_{0, 1}}{b^{*}_{1}} & \frac{F_{0, 2}}{b^{*}_{2}}\\\frac{F_{1, 0}}{b^{*}_{0}} & - \frac{q_{1}}{b^{*}_{1}} - \frac{r_{1}}{b^{*}_{1}} - \frac{F_{0, 1}}{b^{*}_{1}} - \frac{F_{2, 1}}{b^{*}_{1}} & \frac{F_{1, 2}}{b^{*}_{2}}\\\frac{F_{2, 0}}{b^{*}_{0}} & \frac{F_{2, 1}}{b^{*}_{1}} & - \frac{q_{2}}{b^{*}_{2}} - \frac{r_{2}}{b^{*}_{2}} - \frac{F_{0, 2}}{b^{*}_{2}} - \frac{F_{1, 2}}{b^{*}_{2}}\end{array}\right]\end{equation*}%
+\begin{equation*}\mathtt{\text{Jacobian}}\end{equation*}%
+\begin{equation*}\left[\begin{array}{ccc}- \frac{q_{0} + r_{0}}{b^{*}_{0}} - \frac{F_{1, 0}}{b^{*}_{0}} - \frac{F_{2, 0}}{b^{*}_{0}} & \frac{F_{0, 1}}{b^{*}_{1}} & \frac{F_{0, 2}}{b^{*}_{2}}\\\frac{F_{1, 0}}{b^{*}_{0}} & - \frac{q_{1} + r_{1}}{b^{*}_{1}} - \frac{F_{0, 1}}{b^{*}_{1}} - \frac{F_{2, 1}}{b^{*}_{1}} & \frac{F_{1, 2}}{b^{*}_{2}}\\\frac{F_{2, 0}}{b^{*}_{0}} & \frac{F_{2, 1}}{b^{*}_{1}} & - \frac{q_{2} + r_{2}}{b^{*}_{2}} - \frac{F_{0, 2}}{b^{*}_{2}} - \frac{F_{1, 2}}{b^{*}_{2}}\end{array}\right]\end{equation*}%
 \begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
 \begin{equation*}\left[\begin{matrix}- \frac{23}{5} & \frac{2}{11} & \frac{1}{4}\\\frac{2}{5} & - \frac{47}{11} & \frac{1}{2}\\\frac{7}{10} & \frac{8}{11} & -4\end{matrix}\right]\end{equation*}%
-\begin{equation*}\mathtt{\text{Writting file 'steadyStatesDonorControl.m'}}\end{equation*}%
 \begin{equation*}\mathtt{\text{Writting output file 'plainOutput.txt'}}\end{equation*}%
 \end{document}

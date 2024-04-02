@@ -28,9 +28,8 @@
 \begin{equation*}\left[\begin{matrix}1 & 2\\3 & 4\end{matrix}\right]\end{equation*}%
 \begin{equation*}\mathtt{\text{Calculating donor control model jacobian matrix for foodWebData 'foodWebData'}}\end{equation*}%
 \begin{equation*}\mathtt{\text{Jacobian (Sympy)}}\end{equation*}%
-\begin{equation*}\left[\begin{matrix}- \frac{q_{0}}{b^{*}_{0}} - \frac{r_{0}}{b^{*}_{0}} - \frac{F_{1, 0}}{b^{*}_{0}} & \frac{F_{0, 1}}{b^{*}_{1}}\\\frac{F_{1, 0}}{b^{*}_{0}} & - \frac{q_{1}}{b^{*}_{1}} - \frac{r_{1}}{b^{*}_{1}} - \frac{F_{0, 1}}{b^{*}_{1}}\end{matrix}\right]\end{equation*}%
+\begin{equation*}\left[\begin{matrix}- \frac{F_{1, 0}}{b^{*}_{0}} & \frac{F_{0, 1}}{b^{*}_{1}}\\\frac{F_{1, 0}}{b^{*}_{0}} & - \frac{F_{0, 1}}{b^{*}_{1}}\end{matrix}\right]\end{equation*}%
 \begin{equation*}\mathtt{\text{Evaluated}}\end{equation*}%
-\begin{equation*}\left[\begin{matrix}- \frac{23}{5} & \frac{1}{3}\\\frac{3}{5} & -4\end{matrix}\right]\end{equation*}%
-\begin{equation*}\mathtt{\text{Writting file 'steadyStatesDonorControl.m'}}\end{equation*}%
+\begin{equation*}\left[\begin{matrix}- \frac{3}{5} & \frac{1}{3}\\\frac{3}{5} & - \frac{1}{3}\end{matrix}\right]\end{equation*}%
 \begin{equation*}\mathtt{\text{Writting output file 'plainOutput.txt'}}\end{equation*}%
 \end{document}

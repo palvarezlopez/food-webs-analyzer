@@ -29,14 +29,9 @@ Parsed data from 'foodWebData'
 [    ]
 [3  4]
 Calculating donor control model jacobian matrix for foodWebData 'foodWebData'
-Diagonal: consumptionIntensity + outflows
-[24/5   0  ]
-[          ]
-[ 0    14/3]
-Jacobian: initialConsumptionIntensity - diagonal
+Jacobian
 [-23/5  1/3]
 [          ]
 [ 3/5   -4 ]
-Writting file 'steadyStatesDonorControl.m'
 Writting output file 'plainOutput.txt'
 Finished.

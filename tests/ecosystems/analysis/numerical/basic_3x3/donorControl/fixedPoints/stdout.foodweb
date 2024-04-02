@@ -42,11 +42,12 @@ Parsed data from 'foodWebData'
 [7  8  9]
 Calculating donor control model fixed points for 'foodWebData'
 Fixed points(b = b0):
-[-28]
-[   ]
-[-23]
-[   ]
-[-18]
-Writting file 'steadyStatesDonorControl.m'
+[7/2 ]
+[    ]
+[117 ]
+[--- ]
+[ 11 ]
+[    ]
+[71/4]
 Writting output file 'plainOutput.txt'
 Finished.
