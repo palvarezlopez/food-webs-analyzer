@@ -10,7 +10,7 @@ from foodWebsAnalyzer.ecosystems.data.foodWebData import FoodWebData
 from foodWebsAnalyzer.ecosystems.data.symbolicData import SymbolicData
 
 
-# class food web data (used for read input files)
+# class ecosystem
 class Ecosystem:
 
     # Initializing, receive filename and fill all food web data
@@ -26,15 +26,26 @@ class Ecosystem:
         # calculate donor control model
         if (inputParameters.checkBalancing):
             self.balancing = Balancing(inputParameters, printer, self.foodWebData)
+        # check if calculate consumptions
+        if (inputParameters.calculateDonorControlModel or inputParameters.calculateGeneralModel):
+            self.consumptionIntensities = ConsumptionIntensities(inputParameters, printer, self.symbolicData, self.foodWebData)
+        else:
+            self.consumptionIntensities = None
         # calculate donor control model
         if (inputParameters.calculateDonorControlModel):
-            self.donorControlModel = DonorControlModel(inputParameters, printer, self.symbolicData, self.foodWebData)
+            self.donorControlModel = DonorControlModel(inputParameters, printer, self.consumptionIntensities, self.symbolicData, self.foodWebData)
+        else:
+            self.donorControlModel = None
         # calculate general model
         if (inputParameters.calculateGeneralModel):
-            self.generalModel = GeneralModel(inputParameters, printer, self.symbolicData, self.foodWebData, self.proportions, self.donorControlModel)
+            self.generalModel = GeneralModel(inputParameters, printer, self.consumptionIntensities, self.symbolicData, self.foodWebData, self.proportions)
+        else:
+            self.generalModel = None
         # check if calculate biomass dynamic
         if (inputParameters.calculateBiomassDynamic):
             self.odeSolver = ODESolver(inputParameters, printer, self.generalModel, self.symbolicData, self.foodWebData, self.proportions)
+        else:
+            self.odeSolver = None
         # write output files
         printer.writeOutputFiles(self.foodWebData.food_web_filename)
 
@@ -50,10 +61,13 @@ class Ecosystem:
     # balancing
     balancing: Balancing
 
-    # donor control model (either analytic or graphic)
+    # consumption intensities
+    consumptionIntensities: ConsumptionIntensities
+
+    # donor control model
     donorControlModel: DonorControlModel
 
-    # general model (either analytic or graphic)
+    # general model
     generalModel: GeneralModel
 
     # ODE Solver
