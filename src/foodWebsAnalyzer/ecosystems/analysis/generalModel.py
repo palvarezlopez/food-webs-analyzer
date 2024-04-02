@@ -7,7 +7,6 @@ from foodWebsAnalyzer.common.printer import Printer
 from foodWebsAnalyzer.ecosystems.data.foodWebData import FoodWebData
 from foodWebsAnalyzer.ecosystems.data.symbolicData import SymbolicData
 from foodWebsAnalyzer.ecosystems.proportions import Proportions
-from foodWebsAnalyzer.ecosystems.analysis.steadyStates import SteadyStates
 from foodWebsAnalyzer.ecosystems.analysis.stability import Stability
 from foodWebsAnalyzer.ecosystems.controlSpaces.controlSpaceJacobian import ControlSpaceJacobian
 from foodWebsAnalyzer.ecosystems.analysis.consumptionIntensities import ConsumptionIntensities
@@ -22,11 +21,6 @@ class GeneralModel:
         self.calculateDerivative(inputParameters, printer, consumptionIntensities, symbolicData, foodWebData, proportions)
         # calculate jacobian
         self.calculateJacobian(inputParameters, printer, consumptionIntensities, symbolicData, foodWebData, proportions)
-        # check if calculate steady states
-        if (inputParameters.checkCalculateSteadyStates()):
-            self.steadyStates = SteadyStates(inputParameters, printer, "GeneralModel", self.jacobian, symbolicData, foodWebData)
-        else:
-            self.steadyStates = None
         # check if analyze fixed points
         if (inputParameters.checkLocalStability):
             # calculate stability
@@ -160,9 +154,6 @@ class GeneralModel:
 
     # jacobian matrix
     jacobian: sp.Matrix
-
-    # steady States
-    steadyStates: SteadyStates
 
     # domeig components
     stability: Stability

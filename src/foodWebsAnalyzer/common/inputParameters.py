@@ -82,9 +82,6 @@ class InputParameters:
             elif (arguments[i] == "--verbose-generalModelJacobian"):
                 # enable verbose output about general model jacobian
                 self.verboseGeneralModelJacobian = True
-            elif (arguments[i] == "--verbose-steadyStates"):
-                # enable verbose output about steady states
-                self.verboseSteadyStates = True
             elif (arguments[i] == "--verbose-generalModelODE"):
                 # enable verbose output about general model ODE
                 self.verboseGeneralModelODE = True
@@ -119,10 +116,6 @@ class InputParameters:
         os.mkdir(self.outputFolder)
         # init random
         rd.seed(self.randomSeed)
-
-    # check if steady states can be calculated
-    def checkCalculateSteadyStates(self) -> bool:
-        return (self.proportionSd == 1 and self.proportionSr == 0)
 
     # data folder
     dataFolder: str = os.getcwd() + "/../data";
@@ -195,9 +188,6 @@ class InputParameters:
 
     # verbose for specific general model jacobian
     verboseGeneralModelJacobian: bool = False;
-
-    # verbose for specific steady states
-    verboseSteadyStates: bool = False;
 
     # verbose for specific general model ODE
     verboseGeneralModelODE: bool = False;

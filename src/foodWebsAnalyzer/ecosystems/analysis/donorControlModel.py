@@ -6,7 +6,6 @@ from foodWebsAnalyzer.common.inputParameters import InputParameters
 from foodWebsAnalyzer.common.printer import Printer
 from foodWebsAnalyzer.ecosystems.data.foodWebData import FoodWebData
 from foodWebsAnalyzer.ecosystems.data.symbolicData import SymbolicData
-from foodWebsAnalyzer.ecosystems.analysis.steadyStates import SteadyStates
 from foodWebsAnalyzer.ecosystems.analysis.consumptionIntensities import ConsumptionIntensities
 
 # class donor control model (used for calculate all donor control parameters)
@@ -21,8 +20,6 @@ class DonorControlModel:
         self.calculateFixedPoints(inputParameters, printer, symbolicData, foodWebData)
         # calculate jacobian
         self.calculateJacobian(inputParameters, printer, consumptionIntensities, symbolicData, foodWebData)
-        # calculate steady states
-        self.steadyStates = SteadyStates(inputParameters, printer, "DonorControl", self.jacobian, symbolicData, foodWebData)
              
     # calculate donor control model derivative
     def calculateDerivative(self, inputParameters: InputParameters, printer: Printer, consumptionIntensities: ConsumptionIntensities,
@@ -118,6 +115,3 @@ class DonorControlModel:
 
     # jacobian matrix
     jacobian: sp.Matrix
-
-    # steady States
-    steadyStates: SteadyStates
