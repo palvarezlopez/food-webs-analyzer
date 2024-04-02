@@ -6,5 +6,6 @@ if __name__ == '__main__':
     foodWebsAnalyzer.FoodWebsAnalyzer([
         "--verbose",
         "--numerical",
-        "--calculateDonorControlModel"
+        "--calculateDonorControlModel",
+        "--calculateGeneralModel"        
     ])

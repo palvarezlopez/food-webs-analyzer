@@ -4,7 +4,6 @@ import sympy as sp
 # import libraries
 from foodWebsAnalyzer.common.inputParameters import InputParameters
 from foodWebsAnalyzer.common.printer import Printer
-from foodWebsAnalyzer.common import matrixOperations as mo
 from foodWebsAnalyzer.ecosystems.data.foodWebData import FoodWebData
 from foodWebsAnalyzer.ecosystems.data.symbolicData import SymbolicData
 from foodWebsAnalyzer.ecosystems.analysis.steadyStates import SteadyStates
@@ -17,31 +16,14 @@ class DonorControlModel:
     def __init__(self, inputParameters: InputParameters, printer: Printer, consumptionIntensities: ConsumptionIntensities,
                  symbolicData: SymbolicData, foodWebData: FoodWebData) -> None:
         # calculate derivative
-        self.calculateDerivative(inputParameters, printer, symbolicData, foodWebData)
+        self.calculateDerivative(inputParameters, printer, consumptionIntensities, symbolicData, foodWebData)
         # calculate fixed points
         self.calculateFixedPoints(inputParameters, printer, symbolicData, foodWebData)
         # calculate jacobian
-        #self.calculateJacobian(inputParameters, printer, symbolicData, foodWebData)
+        self.calculateJacobian(inputParameters, printer, consumptionIntensities, symbolicData, foodWebData)
         # calculate steady states
-        #self.steadyStates = SteadyStates(inputParameters, printer, "DonorControl", self.jacobian, symbolicData, foodWebData)
-
-    # calculate consumption outputs
-    def calculateConsumptionOutputs(self, inputParameters: InputParameters, printer: Printer, symbolicData: SymbolicData, foodWebData: FoodWebData) -> None:
-        # get common size n
-        n: int = foodWebData.n
-        # declare consumption matrix
-        self.consumptionOutputs = sp.Matrix(sp.ZeroMatrix(n, n))
-        # calculate consumption outputs
-        for i in range(0, n):
-            self.consumptionOutputs[i, 0] = (symbolicData.exports[i, 0] + symbolicData.respiration[i, 0]) / symbolicData.initialBiomass[i, 0];
-        # print info
-        if (inputParameters.verbose or inputParameters.verboseGeneralModelDerivative):
-            printer.printInfo("Calculating consumption outputs for foodWebData '" + foodWebData.food_web_filename + "'")
-            # donor control
-            printer.printMatrixEvaluated(
-                "Consumption outputs",
-                self.consumptionOutputs, symbolicData.getFoodWebDataSubsValues(foodWebData))        
-        
+        self.steadyStates = SteadyStates(inputParameters, printer, "DonorControl", self.jacobian, symbolicData, foodWebData)
+             
     # calculate donor control model derivative
     def calculateDerivative(self, inputParameters: InputParameters, printer: Printer, consumptionIntensities: ConsumptionIntensities,
                             symbolicData: SymbolicData, foodWebData: FoodWebData) -> None:
@@ -87,7 +69,8 @@ class DonorControlModel:
             printer.printMatrix("Fixed points(b = b0):", self.fixedPoints)
 
     # calculate donor control Jacobian
-    def calculateJacobian(self, inputParameters: InputParameters, printer: Printer, symbolicData: SymbolicData, foodWebData: FoodWebData) -> None:
+    def calculateJacobian(self, inputParameters: InputParameters, printer: Printer, consumptionIntensities: ConsumptionIntensities,
+                          symbolicData: SymbolicData, foodWebData: FoodWebData) -> None:
         # first check if use sympy jacobian method or calculate manually
         if inputParameters.useSympyJacobian:
             # calculate use sympy jacobian
@@ -100,23 +83,29 @@ class DonorControlModel:
                     self.jacobian,
                     symbolicData.getFoodWebDataSubsValues(foodWebData))
         else:
-            # get the sume of units exports and respirations
-            exportUnits : sp.Matrix = mo.add(self.unitsExport, self.unitsRespiration)
-            # calculate diagonal matrix of the sumo of consumption intensity and outflows
-            diagonal: sp.Matrix = mo.diagonal(mo.add(self.consumptionIntensity, exportUnits));
-            # calculate jacobian substracting the calculated diagonal to the consumptionIntensity matrix
-            self.jacobian = mo.substract(self.initialConsumptionIntensity, diagonal)
+            # get common size n
+            n: int = foodWebData.n
+            # init jacobian matrix
+            self.jacobian = sp.Matrix(sp.ZeroMatrix(n, n))
+            # calculate consumptions
+            for i in range(0, n):
+                for j in range(0, n):
+                    if (i != j):
+                        self.jacobian[i, j] = consumptionIntensities.donorControlConsumption[i,j]
+                    else:
+                        # calculate sumatorial values
+                        sumDonorControlConsumption = 0
+                        for k in range(0, n):
+                            sumDonorControlConsumption += consumptionIntensities.donorControlConsumption[k,i]
+                        # calculate jacobian value
+                        self.jacobian[i, j] = consumptionIntensities.donorControlConsumption[i, i] - sumDonorControlConsumption - consumptionIntensities.outputConsumption[i, 0]
             # print info
             if (inputParameters.verbose or inputParameters.verboseDonorControlJacobian):
                 printer.printInfo("Calculating donor control model jacobian matrix for foodWebData '" + foodWebData.food_web_filename + "'")
-                # get dictionary with food web data subs values
-                foodWebDataSubsValues = symbolicData.getFoodWebDataSubsValues(foodWebData)
                 printer.printMatrixEvaluated(
-                    "Diagonal: consumptionIntensity + outflows",
-                    diagonal, foodWebDataSubsValues)
-                printer.printMatrixEvaluated(
-                    "Jacobian: initialConsumptionIntensity - diagonal",
-                    self.jacobian, foodWebDataSubsValues)
+                    "Jacobian",
+                    self.jacobian,
+                    symbolicData.getFoodWebDataSubsValues(foodWebData))
 
     # donor control total system flows
     donorControlTotalSystemFlows: sp.Matrix

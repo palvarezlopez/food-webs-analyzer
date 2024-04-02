@@ -4,6 +4,7 @@ from foodWebsAnalyzer.common.printer import Printer
 from foodWebsAnalyzer.ecosystems.ode.odeSolver import ODESolver
 from foodWebsAnalyzer.ecosystems.balancing import Balancing
 from foodWebsAnalyzer.ecosystems.proportions import Proportions
+from foodWebsAnalyzer.ecosystems.analysis.consumptionIntensities import ConsumptionIntensities
 from foodWebsAnalyzer.ecosystems.analysis.donorControlModel import DonorControlModel
 from foodWebsAnalyzer.ecosystems.analysis.generalModel import GeneralModel
 from foodWebsAnalyzer.ecosystems.data.foodWebData import FoodWebData
