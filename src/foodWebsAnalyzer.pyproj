@@ -34,6 +34,7 @@
     <Compile Include="foodWebsAnalyzer\common\printer.py" />
     <Compile Include="foodWebsAnalyzer\common\inputParameters.py" />
     <Compile Include="foodWebsAnalyzer\common\matrixOperations.py" />
+    <Compile Include="foodWebsAnalyzer\ecosystems\analysis\consumptionIntensities.py" />
     <Compile Include="foodWebsAnalyzer\ecosystems\analysis\generalModel.py" />
     <Compile Include="foodWebsAnalyzer\ecosystems\analysis\donorControlModel.py" />
     <Compile Include="foodWebsAnalyzer\ecosystems\analysis\stability.py" />
