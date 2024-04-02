@@ -1,7 +1,0 @@
-Traceback (most recent call last):
-  File "C:\Users\Pablo\.texttest\tmp\foodweb.05Feb111804.18056\foodweb\operations\matrix\hadamard_product_vector\invalid\test.py", line 13, in <module>
-    sp.pprint(sp.Matrix(mo.hadamard_product_vector(matrix, vector)))
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Repositories\foodweb-dynamics-python\python\src\common\matrixOperations.py", line 77, in hadamard_product_vector
-    raise Exception("hadamard_product_vector only works for nxn matrix and n*1 vectors. "
-Exception: hadamard_product_vector only works for nxn matrix and n*1 vectors. Given 3x3 and 1x2
