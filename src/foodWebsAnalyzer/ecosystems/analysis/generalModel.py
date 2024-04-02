@@ -44,31 +44,31 @@ class GeneralModel:
         # init total system flows
         self.donorControlTotalSystemFlows = sp.Matrix(sp.ZeroMatrix(n, 1))
         self.recipientTotalSystemFlows = sp.Matrix(sp.ZeroMatrix(n, 1))
-        self.mixedTotalSystemFlows = sp.Matrix(sp.ZeroMatrix(n, 1))
+        self.loktaVolterraTotalSystemFlows = sp.Matrix(sp.ZeroMatrix(n, 1))
         # calculate total system flows
         for i in range(0, n):
             # declare partial sums
             sumDonorControl = 0
             sumRecipient = 0
-            sumMixed = 0
+            sumLotkaVolterraConsumption = 0
             for j in range(0, n):
                 sumDonorControl += ((consumptionIntensities.donorControlConsumption[i,j] * symbolicData.biomass[j, 0]) -
                                     (consumptionIntensities.donorControlConsumption[j,i] * symbolicData.biomass[i, 0]))
                 sumRecipient += ((consumptionIntensities.recipientConsumption[i,j] * symbolicData.biomass[i, 0]) -
                                  (consumptionIntensities.recipientConsumption[j,i] * symbolicData.biomass[j, 0]))
-                sumMixed += ((consumptionIntensities.lotkaVolterraConsumption[i,j] * symbolicData.biomass[i, 0] * symbolicData.biomass[j, 0]) -
+                sumLotkaVolterraConsumption += ((consumptionIntensities.lotkaVolterraConsumption[i,j] * symbolicData.biomass[i, 0] * symbolicData.biomass[j, 0]) -
                              (consumptionIntensities.lotkaVolterraConsumption[j,i] * symbolicData.biomass[i, 0] * symbolicData.biomass[j, 0]))
             # add sums into total system flows
             self.donorControlTotalSystemFlows[i, 0] = sumDonorControl
             self.recipientTotalSystemFlows[i, 0] = sumRecipient
-            self.mixedTotalSystemFlows[i, 0] = sumMixed
+            self.loktaVolterraTotalSystemFlows[i, 0] = sumLotkaVolterraConsumption
         # init total system flows
         self.totalSystemFlows = sp.Matrix(sp.ZeroMatrix(n, 1))
         # calculate total system flows
         for i in range(0, n):
             self.totalSystemFlows[i, 0] = ((proportions.s_d * self.donorControlTotalSystemFlows[i, 0]) +
                                            (proportions.s_r * self.recipientTotalSystemFlows[i, 0]) +
-                                           (proportions.s_l * self.mixedTotalSystemFlows[i, 0]))
+                                           (proportions.s_l * self.loktaVolterraTotalSystemFlows[i, 0]))
         # init derivative
         self.db_dt = sp.Matrix(sp.ZeroMatrix(n, 1))
         # calculate derivative
@@ -88,7 +88,7 @@ class GeneralModel:
             # mixed
             printer.printMatrixEvaluated(
                 "Mixed total system flows",
-                self.mixedTotalSystemFlows, symbolicData.getFoodWebDataSubsValues(foodWebData))
+                self.loktaVolterraTotalSystemFlows, symbolicData.getFoodWebDataSubsValues(foodWebData))
             # result
             printer.printMatrixEvaluated(
                 "Total system flows",
@@ -124,18 +124,18 @@ class GeneralModel:
                                                (proportions.s_l * (consumptionIntensities.lotkaVolterraConsumption[i, j] - consumptionIntensities.lotkaVolterraConsumption[j,i]) * symbolicData.biomass[i, 0]))
                     else:
                         # calculate sumatorial values
-                        sumDonorControlInitialConsumptionIntensity = 0
-                        sumRecipientControlInitialConsumptionIntensity = 0
-                        sumMixed = 0
+                        sumDonorControlConsumption = 0
+                        sumRecipientConsumption = 0
+                        sumLotkaVolterraConsumption = 0
                         for k in range(0, n):
-                            sumDonorControlInitialConsumptionIntensity += consumptionIntensities.donorControlConsumption[k,i]
-                            sumRecipientControlInitialConsumptionIntensity += consumptionIntensities.recipientConsumption[i,k]
-                            sumMixed += ((consumptionIntensities.lotkaVolterraConsumption[i, k] * symbolicData.biomass[k, 0]) -
-                                         (consumptionIntensities.lotkaVolterraConsumption[k, i] * symbolicData.biomass[k, 0]))
+                            sumDonorControlConsumption += consumptionIntensities.donorControlConsumption[k,i]
+                            sumRecipientConsumption += consumptionIntensities.recipientConsumption[i,k]
+                            sumLotkaVolterraConsumption += ((consumptionIntensities.lotkaVolterraConsumption[i, k] * symbolicData.biomass[k, 0]) -
+                                                            (consumptionIntensities.lotkaVolterraConsumption[k, i] * symbolicData.biomass[k, 0]))
                         # calculate jacobian value
-                        self.jacobian[i, j] = ((proportions.s_d * (consumptionIntensities.donorControlConsumption[i,i] - sumDonorControlInitialConsumptionIntensity)) +
-                                               (proportions.s_r * (sumRecipientControlInitialConsumptionIntensity - consumptionIntensities.recipientConsumption[i,i])) +
-                                               (proportions.s_l * sumMixed) - consumptionIntensities.outputConsumption[i])
+                        self.jacobian[i, j] = ((proportions.s_d * (consumptionIntensities.donorControlConsumption[i,i] - sumDonorControlConsumption)) +
+                                               (proportions.s_r * (sumRecipientConsumption - consumptionIntensities.recipientConsumption[i,i])) +
+                                               (proportions.s_l * sumLotkaVolterraConsumption) - consumptionIntensities.outputConsumption[i])
             # print info
             if (inputParameters.verbose or inputParameters.verboseGeneralModelJacobian):
                 printer.printInfo("Calculating general jacobian matrix for foodWebData '" + foodWebData.food_web_filename + "'")
@@ -150,7 +150,7 @@ class GeneralModel:
     recipientTotalSystemFlows: sp.Matrix
 
     # mixed total system flows
-    mixedTotalSystemFlows: sp.Matrix
+    loktaVolterraTotalSystemFlows: sp.Matrix
 
     # total system flow
     totalSystemFlows: sp.Matrix
