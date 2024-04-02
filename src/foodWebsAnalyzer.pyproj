@@ -40,7 +40,6 @@
     <Compile Include="foodWebsAnalyzer\ecosystems\analysis\stability.py" />
     <Compile Include="foodWebsAnalyzer\ecosystems\data\symbolicData.py" />
     <Compile Include="foodWebsAnalyzer\ecosystems\ode\odeChecker.py" />
-    <Compile Include="foodWebsAnalyzer\ecosystems\analysis\steadyStates.py" />
     <Compile Include="foodWebsAnalyzer\ecosystems\ode\odeSolver.py" />
     <Compile Include="foodWebsAnalyzer\ecosystems\balancing.py" />
     <Compile Include="foodWebsAnalyzer\ecosystems\proportions.py" />
