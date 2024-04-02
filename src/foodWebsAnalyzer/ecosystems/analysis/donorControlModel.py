@@ -8,14 +8,14 @@ from foodWebsAnalyzer.common import matrixOperations as mo
 from foodWebsAnalyzer.ecosystems.data.foodWebData import FoodWebData
 from foodWebsAnalyzer.ecosystems.data.symbolicData import SymbolicData
 from foodWebsAnalyzer.ecosystems.analysis.steadyStates import SteadyStates
+from foodWebsAnalyzer.ecosystems.analysis.consumptionIntensities import ConsumptionIntensities
 
 # class donor control model (used for calculate all donor control parameters)
 class DonorControlModel:
 
     # initializing, receive io parameters and symbolic data
-    def __init__(self, inputParameters: InputParameters, printer: Printer, symbolicData: SymbolicData, foodWebData: FoodWebData) -> None:
-        # calculate consumption outputs
-        self.calculateConsumptionOutputs(inputParameters, printer, symbolicData, foodWebData)
+    def __init__(self, inputParameters: InputParameters, printer: Printer, consumptionIntensities: ConsumptionIntensities,
+                 symbolicData: SymbolicData, foodWebData: FoodWebData) -> None:
         # calculate derivative
         self.calculateDerivative(inputParameters, printer, symbolicData, foodWebData)
         # calculate fixed points
@@ -43,15 +43,10 @@ class DonorControlModel:
                 self.consumptionOutputs, symbolicData.getFoodWebDataSubsValues(foodWebData))        
         
     # calculate donor control model derivative
-    def calculateDerivative(self, inputParameters: InputParameters, printer: Printer, symbolicData: SymbolicData, foodWebData: FoodWebData) -> None:
+    def calculateDerivative(self, inputParameters: InputParameters, printer: Printer, consumptionIntensities: ConsumptionIntensities,
+                            symbolicData: SymbolicData, foodWebData: FoodWebData) -> None:
         # get common size n
         n: int = foodWebData.n
-        # declare consumption matrix
-        self.donorControlInitialConsumptionIntensity = sp.Matrix(sp.ZeroMatrix(n, n))
-        # calculate consumptions
-        for i in range(0, n):
-            for j in range(0, n):
-                self.donorControlInitialConsumptionIntensity[i,j] = (symbolicData.flowMatrix[i,j] / symbolicData.initialBiomass[j, 0])
         # init total system flows
         self.donorControlTotalSystemFlows = sp.Matrix(sp.ZeroMatrix(n, 1))
         # calculate total system flows
@@ -59,22 +54,19 @@ class DonorControlModel:
             # declare partial sums
             sumDonorControl = 0
             for j in range(0, n):
-                sumDonorControl += ((self.donorControlInitialConsumptionIntensity[i,j] * symbolicData.biomass[j, 0]) -
-                                    (self.donorControlInitialConsumptionIntensity[j,i] * symbolicData.biomass[i, 0]))
+                sumDonorControl += ((consumptionIntensities.donorControlConsumption[i,j] * symbolicData.biomass[j, 0]) -
+                                    (consumptionIntensities.donorControlConsumption[j,i] * symbolicData.biomass[i, 0]))
             # add sums into total system flows
             self.donorControlTotalSystemFlows[i, 0] = sumDonorControl
         # init derivative
         self.db_dt = sp.Matrix(sp.ZeroMatrix(n, 1))
         # calculate derivative
         for i in range(0, n):
-            self.db_dt[i, 0] = self.donorControlTotalSystemFlows[i, 0] - self.consumptionOutputs[i, 0] + symbolicData.imports[i, 0]
+            self.db_dt[i, 0] = self.donorControlTotalSystemFlows[i, 0] - consumptionIntensities.outputConsumption[i, 0] + symbolicData.imports[i, 0]
         # print info
         if (inputParameters.verbose or inputParameters.verboseDonorControlDerivative):
             printer.printInfo("Calculating donor control model derivative for foodWebData '" + foodWebData.food_web_filename + "'")
-            # donor control
-            printer.printMatrixEvaluated(
-                "Donor control initial consumption intensity",
-                self.donorControlInitialConsumptionIntensity, symbolicData.getFoodWebDataSubsValues(foodWebData))
+            # donor control total system flows
             printer.printMatrixEvaluated(
                 "Donor control total system flows",
                 self.donorControlTotalSystemFlows, symbolicData.getFoodWebDataSubsValues(foodWebData))
@@ -125,12 +117,6 @@ class DonorControlModel:
                 printer.printMatrixEvaluated(
                     "Jacobian: initialConsumptionIntensity - diagonal",
                     self.jacobian, foodWebDataSubsValues)
-
-    # consumption outputs
-    consumptionOutputs: sp.Matrix
-
-    # donor control consumption intensity: F (/) bi
-    donorControlInitialConsumptionIntensity: sp.Matrix
 
     # donor control total system flows
     donorControlTotalSystemFlows: sp.Matrix
