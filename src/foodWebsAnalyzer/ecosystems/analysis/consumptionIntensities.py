@@ -31,6 +31,18 @@ class ConsumptionIntensities:
         # print info
         if (inputParameters.verbose or inputParameters.verboseGeneralModelDerivative):
             printer.printInfo("Calculating output consumption for foodWebData '" + foodWebData.food_web_filename + "'")
+            # donor control consumption
+            printer.printMatrixEvaluated(
+                "Donor Control consumption",
+                self.donorControlConsumption, symbolicData.getFoodWebDataSubsValues(foodWebData))    
+            # recipient consumption
+            printer.printMatrixEvaluated(
+                "Recipient consumption",
+                self.recipientConsumption, symbolicData.getFoodWebDataSubsValues(foodWebData))    
+            # lotka-volterra consumption
+            printer.printMatrixEvaluated(
+                "Lotka-Volterra consumption",
+                self.lotkaVolterraConsumption, symbolicData.getFoodWebDataSubsValues(foodWebData))                                        
             # donor control
             printer.printMatrixEvaluated(
                 "Output consumption",
@@ -42,7 +54,7 @@ class ConsumptionIntensities:
     # recipient consumption intensity: F (/) bj
     recipientConsumption: sp.Matrix
 
-    # lotka volterra: F (/) bi*bj
+    # lotka-volterra: F (/) bi*bj
     lotkaVolterraConsumption: sp.Matrix
     
     # consumption outputs (q + r) (/) bj
